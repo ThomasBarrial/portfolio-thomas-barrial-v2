@@ -21,3 +21,15 @@ interface IDate {
   name: string;
   date: string;
 }
+
+interface ICollaborator {
+  name: string;
+  image: string;
+  profilTitle: string;
+  socialLinks: ISocialLink[];
+}
+
+interface ISocialLink {
+  icon: string;
+  link: string;
+}

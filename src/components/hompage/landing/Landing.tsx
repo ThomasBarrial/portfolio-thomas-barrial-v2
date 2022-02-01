@@ -10,9 +10,9 @@ import { useInView } from 'react-intersection-observer';
 import { AppContext } from '../../../context/AppContext';
 import { ActionType } from '../../../context/Actions';
 
-function Section1() {
+function Landing() {
   const { isLoader } = useContext(IsLoaderContext);
-  const { ref, inView } = useInView({ threshold: 0.8 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
   const [isAnim, setIsAnim] = useState(true);
   const { dispatch } = useContext(AppContext);
 
@@ -37,18 +37,17 @@ function Section1() {
     <div ref={ref} className={`${contentClass} font-poppins`}>
       {!isLoader && isAnim && (
         <div>
-          <SlideDown duration={1.5} className="font-syncopate font-bold text-7xl text-center">
+          <SlideUp duration={1.2} className="font-syncopate font-bold text-7xl text-center">
             SPEND COIN
-          </SlideDown>
-          <SlideDown duration={2} className="text-2xl mt-2 text-center">
-            BUY EVERYTHING WITH CRYPTO
-          </SlideDown>
-          <SlideUp duration={2} className="text-center mt-5 font-poppins lg:mx-10  lg:text-lg">
-            We aim to allow anyone to purchase goods in a decentralized way with a non custodial wallet. Spend coin team build customised e-shops
-            called meta-shops. As a seller, you’ll be able to offer decentralized crypto-paiement to your customers and receive euros or
-            crypto-currencies.{' '}
           </SlideUp>
-          <SlideUp duration={1.5} className="mt-10 flex w-full justify-center">
+          <SlideUp duration={1.5} className="text-2xl mt-2 text-center">
+            BUY EVERYTHING WITH CRYPTO
+          </SlideUp>
+          <SlideUp duration={2} className="text-center mt-5 font-poppins lg:mx-10  lg:text-lg">
+            Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized
+            crypto-paiement to your customers and receive euros or crypto-currencies at your will.
+          </SlideUp>
+          <SlideUp duration={2.5} className="mt-10 flex w-full justify-center">
             <a
               href="https://spend-coin-goodies.vercel.app/"
               className="bg-transparent z-40 transform   duration-500 hover:border-blue hover:text-blue lg:mx-4 mx-2  text-xs lg:text-base rounded-md border px-10 py-2"
@@ -73,4 +72,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default Landing;
