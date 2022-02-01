@@ -17,6 +17,7 @@ module.exports = {
         textpartner: '120px',
       },
       width: {
+        line: '0.1rem',
         section3: '89.5%',
         people: '11rem',
         92: '93%',

@@ -13,7 +13,7 @@ function Button({ children, className, onClick }: IProps): JSX.Element {
       onClick={onClick}
       whileTap={{ scale: 1.2 }}
       type="button"
-      className={`${className} bg-transparent z-40 transform hover:bg-opacity-50 hover:scale-105 hover:border-transparent duration-500 hover:bg-white  text-xs lg:text-base rounded-md border px-10 py-2`}>
+      className={`${className} bg-transparent z-40 transform   duration-500 hover:border-blue hover:text-blue  text-xs lg:text-base rounded-md border px-10 py-2`}>
       <p className="">{children}</p>
     </motion.button>
   );
