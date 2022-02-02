@@ -33,3 +33,9 @@ interface ISocialLink {
   icon: string;
   link: string;
 }
+
+interface ISocialIcon {
+  name: string;
+  icon: string;
+  link: string;
+}
