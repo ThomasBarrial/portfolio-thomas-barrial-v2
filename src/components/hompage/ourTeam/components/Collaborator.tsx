@@ -7,7 +7,7 @@ interface IProps {
 
 function Collaborator({ item }: IProps): JSX.Element {
   return (
-    <div className="h-52 w-40 mx-5 overflow-hidden rounded-md text-left">
+    <div className="h-52 w-40 lg:w-40 mx-2 lg:mx-5 my-2 overflow-hidden rounded-md text-left">
       <div
         className="h-full w-full transform duration-700  hover:scale-110"
         style={{

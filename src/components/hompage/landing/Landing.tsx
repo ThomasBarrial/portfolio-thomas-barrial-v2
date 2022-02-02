@@ -43,7 +43,7 @@ function Landing() {
           <SlideUp duration={1.5} className="text-2xl mt-2 text-center">
             BUY EVERYTHING WITH CRYPTO
           </SlideUp>
-          <SlideUp duration={2} className="text-center mt-5 font-poppins lg:mx-10  lg:text-lg">
+          <SlideUp duration={2} className="text-center mt-5 mx-10 font-poppins lg:text-lg">
             Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized
             crypto-paiement to your customers and receive euros or crypto-currencies at your will.
           </SlideUp>

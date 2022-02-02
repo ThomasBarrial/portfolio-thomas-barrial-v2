@@ -31,13 +31,17 @@ function OurTeam() {
   return (
     <div ref={ref} className={`${contentClass} text-center`}>
       {isAnim && (
-        <div>
+        <div className="w-full flex flex-col items-center justify-center">
           <SlideUp duration={1.5} className="font-syncopate font-bold text-5xl md:text-5xl">
             {data.title}
           </SlideUp>
-          <SlideUp duration={2} className="flex mt-10">
+          <SlideUp duration={2} className="flex flex-wrap items-center justify-center mt-10">
             {data.collaborators.map((item) => {
-              return <Collaborator item={item} />;
+              return (
+                <div key={item.name}>
+                  <Collaborator item={item} />
+                </div>
+              );
             })}
           </SlideUp>
           <SlideUp duration={1.5} className="font-poppins text-lg mt-10">
