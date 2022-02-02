@@ -2,12 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ActionType } from '../../../context/Actions';
 import { AppContext } from '../../../context/AppContext';
-import { roadMap } from '../../../data/homepage/roadMap/roadmap';
+import { roadMap } from '../../../data/homepage/roadMap/roadMap';
 import SlideLeft from '../../animated/SlideLeft';
-import SlideRight from '../../animated/SlideRight';
 import SlideUp from '../../animated/SlideUp';
 
-function Section2() {
+function RoadMap() {
   const { ref, inView } = useInView({ threshold: 0.8 });
   const [isAnim, setIsAnim] = useState(true);
   const { dispatch } = useContext(AppContext);
@@ -68,4 +67,4 @@ function Section2() {
   );
 }
 
-export default Section2;
+export default RoadMap;

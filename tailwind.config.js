@@ -13,7 +13,7 @@ module.exports = {
         content: '1000px',
       },
       minHeight: {
-        container: '550px',
+        container: '520px',
         textpartner: '120px',
       },
       width: {
