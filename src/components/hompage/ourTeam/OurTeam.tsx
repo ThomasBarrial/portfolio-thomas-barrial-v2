@@ -24,7 +24,7 @@ function OurTeam() {
     if (isAnim) {
       dispatch({
         type: ActionType.SetIndex,
-        payload: 3,
+        payload: 5,
       });
     }
   }, [isAnim]);

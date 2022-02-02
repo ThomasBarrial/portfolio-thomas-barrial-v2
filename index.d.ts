@@ -39,3 +39,9 @@ interface ISocialIcon {
   icon: string;
   link: string;
 }
+
+interface IPartner {
+  name: string;
+  text: string;
+  link: string;
+}
