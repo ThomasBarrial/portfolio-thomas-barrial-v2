@@ -36,16 +36,12 @@ function Landing() {
   return (
     <div ref={ref} className={`${contentClass} font-poppins`}>
       {!isLoader && isAnim && (
-        <div>
+        <div className="flex flex-col items-center justify-center">
           <SlideUp duration={1.2} className="font-syncopate font-bold text-7xl text-center">
             SPEND COIN
           </SlideUp>
-          <SlideUp duration={1.5} className="text-2xl mt-2 text-center">
+          <SlideUp duration={1.5} className="text-2xl font-poppins mt-2 text-center">
             BUY EVERYTHING WITH CRYPTO
-          </SlideUp>
-          <SlideUp duration={2} className="text-center mt-5 mx-10 font-poppins lg:text-lg">
-            Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized
-            crypto-paiement to your customers and receive euros or crypto-currencies at your will.
           </SlideUp>
           <SlideUp duration={2.5} className="mt-10 flex w-full justify-center">
             <a
@@ -60,6 +56,10 @@ function Landing() {
               target={'_blank'}>
               White paper
             </a>
+          </SlideUp>
+          <SlideUp duration={2} className="text-center lg:w-9/12 font-thin leading-7 mt-10 lg:mx-10 font-poppins lg:text-lg">
+            Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized
+            crypto-paiement to your customers and receive euros or crypto-currencies at your will.
           </SlideUp>
         </div>
       )}

@@ -2,16 +2,15 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ActionType } from '../../../context/Actions';
 import { AppContext } from '../../../context/AppContext';
-import { contentClass } from '../../../styles/contentClass';
+import { containerClass } from '../../../styles/containerClass';
 import SlideUp from '../../animated/SlideUp';
-import data from '../../../data/homepage/team/team';
-import Collaborator from './components/Collaborator';
+import data from '../../../data/homepage/socialLinks/socialLinks';
+import SocialIcon from './components/SocialIcon';
 
-function OurTeam() {
+function SocialMedia() {
   const { ref, inView } = useInView({ threshold: 0.5 });
   const [isAnim, setIsAnim] = useState(true);
   const { dispatch } = useContext(AppContext);
-
   useEffect(() => {
     if (inView === false && window.innerWidth < 1200) {
       setIsAnim(true);
@@ -24,28 +23,29 @@ function OurTeam() {
     if (isAnim) {
       dispatch({
         type: ActionType.SetIndex,
-        payload: 3,
+        payload: 4,
       });
     }
   }, [isAnim]);
   return (
-    <div ref={ref} className={`${contentClass} text-center`}>
+    <div ref={ref} className={`${containerClass}`}>
       {isAnim && (
-        <div className="w-full flex flex-col items-center justify-center">
-          <SlideUp duration={1.5} className="font-syncopate font-bold text-4xl md:text-5xl">
-            {data.title}
+        <div className="lg:w-9/12">
+          <SlideUp duration={1} className="font-syncopate font-bold text-4xl md:text-5xl">
+            OUR SOCIAL LINKS
           </SlideUp>
-          <SlideUp duration={2} className="flex flex-wrap items-center justify-center mt-10">
-            {data.collaborators.map((item) => {
+          <SlideUp duration={1.5} className="flex items-center justify-center my-10">
+            {data.map((item) => {
               return (
                 <div key={item.name}>
-                  <Collaborator item={item} />
+                  <SocialIcon item={item} />
                 </div>
               );
             })}
           </SlideUp>
-          <SlideUp duration={1.5} className="font-poppins text-lg mt-10">
-            {data.subtitle}
+          <SlideUp duration={2} className="font-poppins text-md md:text-lg mx-4">
+            To be aware of the latest news follow us on our social medias. If you have a special request or if you want to receive all spend coin news
+            directly into your email box ask us through and we’ll add you to our newsletter.
           </SlideUp>
         </div>
       )}
@@ -53,4 +53,4 @@ function OurTeam() {
   );
 }
 
-export default OurTeam;
+export default SocialMedia;
