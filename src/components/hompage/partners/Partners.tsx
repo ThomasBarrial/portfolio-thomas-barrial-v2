@@ -30,7 +30,9 @@ function Partners() {
     }
   }, [isAnim]);
   return (
-    <div ref={ref} className={`${containerClass}`}>
+    <div
+      ref={ref}
+      className="flex  min-h-container w-screen  flex-col items-center justify-center text-center border-t border-b border-blue bg-blue shadow-container bg-opacity-5 py-24">
       {isAnim && (
         <div>
           <SlideUp className={sectionTitleClass} duration={2}>
