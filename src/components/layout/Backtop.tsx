@@ -25,11 +25,11 @@ function Backtop(): JSX.Element {
   }
 
   return (
-    <button type="button" onClick={() => scrollToTop()} className="flex items-center fixed bottom-8 text-blue right-44 lg:right-56">
-      {visible && <p className="hidden animate-fadeIn lg:flex">back to the top</p>}
-      <div className={`ml-2  ${visible ? `transform duration-700 rotate-0 mt-2` : `transform duration-700 rotate-180`}`}>
+    <button type="button" onClick={() => scrollToTop()} className="flex items-center fixed bottom-8 text-blue right-44 lg:left-56">
+      <div className={`mr-2  ${visible ? `transform duration-700 rotate-0 mt-2` : `transform duration-700 rotate-180`}`}>
         <Image src={'/icons/arrow.svg'} height={20} width={20} alt="" />
       </div>
+      {visible && <p className="hidden animate-fadeIn lg:flex">back to the top</p>}
     </button>
   );
 }

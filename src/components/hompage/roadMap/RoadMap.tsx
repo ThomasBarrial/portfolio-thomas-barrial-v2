@@ -3,11 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import { ActionType } from '../../../context/Actions';
 import { AppContext } from '../../../context/AppContext';
 import { roadMap } from '../../../data/homepage/roadMap/roadMap';
+import { contentClass } from '../../../styles/contentClass';
 import SlideLeft from '../../animated/SlideLeft';
 import SlideUp from '../../animated/SlideUp';
 
 function RoadMap() {
-  const { ref, inView } = useInView({ threshold: 0.8 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
   const [isAnim, setIsAnim] = useState(true);
   const { dispatch } = useContext(AppContext);
 
@@ -29,11 +30,9 @@ function RoadMap() {
   }, [isAnim]);
 
   return (
-    <div
-      ref={ref}
-      className="flex  min-h-container w-screen  flex-col items-center justify-center text-center border-t border-b border-blue bg-blue shadow-container bg-opacity-5 py-24">
+    <div ref={ref} className={contentClass}>
       {isAnim && (
-        <div>
+        <div className="text-center">
           <SlideUp duration={1.5} className="font-syncopate font-bold text-4xl md:text-5xl">
             PRODUCT ROADMAP
           </SlideUp>

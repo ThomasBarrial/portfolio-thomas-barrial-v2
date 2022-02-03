@@ -5,6 +5,7 @@ import { AppContext } from '../../../context/AppContext';
 import SlideUp from '../../animated/SlideUp';
 import data from '../../../data/homepage/socialLinks/socialLinks';
 import SocialIcon from './components/SocialIcon';
+import { contentClass } from '../../../styles/contentClass';
 
 function SocialMedia() {
   const { ref, inView } = useInView({ threshold: 0.5 });
@@ -27,11 +28,9 @@ function SocialMedia() {
     }
   }, [isAnim]);
   return (
-    <div
-      ref={ref}
-      className="flex  min-h-container w-screen  flex-col items-center justify-center text-center border-t border-b border-blue bg-blue shadow-container bg-opacity-5 py-24">
+    <div ref={ref} className={contentClass}>
       {isAnim && (
-        <div className="lg:w-9/12">
+        <div className="text-center">
           <SlideUp duration={1} className="font-syncopate font-bold text-4xl md:text-5xl">
             OUR SOCIAL LINKS
           </SlideUp>

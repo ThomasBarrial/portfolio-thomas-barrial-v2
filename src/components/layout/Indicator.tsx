@@ -21,7 +21,7 @@ export default function Indicator({ data }: IProps): ReactElement {
   };
 
   return (
-    <div className={`hidden w-32 right-5 top-5 lg:left-20 lg:top-32 fixed lg:flex flex-col items-center align-middle text-blue justify-around `}>
+    <div className={`hidden w-32 right-5 top-5 lg:right-20 lg:top-32 fixed lg:flex flex-col items-center align-middle text-blue justify-around `}>
       {data.map((section, index) => {
         return (
           <button type="button" onClick={() => handleClick(section.id)} className="w-full flex justify-start items-center" key={index}>

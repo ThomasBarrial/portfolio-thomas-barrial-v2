@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { AppContext } from '../../../context/AppContext';
 import { ActionType } from '../../../context/Actions';
 import { useisContactFromStore } from '../../store/isContactContext.slice';
+import { contentClass } from '../../../styles/contentClass';
 
 function Partners() {
   const { dispatchIsContact } = useisContactFromStore();
@@ -31,18 +32,16 @@ function Partners() {
     }
   }, [isAnim]);
   return (
-    <div
-      ref={ref}
-      className="flex  min-h-container w-screen  flex-col items-center justify-center text-center border-t border-b border-blue bg-blue shadow-container bg-opacity-5 py-24">
+    <div ref={ref} className={contentClass}>
       {isAnim && (
-        <div>
+        <div className="w-full text-center ">
           <SlideUp className={sectionTitleClass} duration={2}>
             Our Partners
           </SlideUp>
-          <SlideUp duration={1.8} className="flex flex-col items-center justify-center lg:flex-row w-9/12 my-10">
+          <SlideUp duration={1.8} className="flex flex-col items-center justify-center lg:flex-row w-9/12  lg:w-full my-10">
             {partners.map((item) => {
               return (
-                <div className="lg:w-1/3 my-5 lg:border-r lg:border-l px-4" key={item.name}>
+                <div className="lg:w-5/12 flex my-5 px-10 lg:border-r lg:border-l" key={item.name}>
                   <Partner item={item} />
                 </div>
               );

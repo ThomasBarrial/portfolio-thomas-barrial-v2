@@ -6,7 +6,7 @@ interface IProps {
 
 function Partner({ item }: IProps) {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center text-center">
       <h4 className="font-bold text-xl">{item.name}</h4>
       <p className="mt-2 flex items-center lg:min-h-textpartner mb-8">{item.text}</p>
       <a

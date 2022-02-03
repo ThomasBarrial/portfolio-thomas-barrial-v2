@@ -8,7 +8,7 @@ function Partners(): JSX.Element {
       <SlideUp duration={1.2} className="font-bold">
         Our partners
       </SlideUp>
-      <SlideUp className="flex flex-col items-center" duration={1.8}>
+      <SlideUp duration={1.8}>
         {partners.map((item) => {
           return (
             <div className="my-1" key={item.name}>
