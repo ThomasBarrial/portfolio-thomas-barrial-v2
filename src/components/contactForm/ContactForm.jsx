@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Inputs from './components/Inputs';
 import Footer from './components/Footer';
+import close from '../../../public/icons/close.svg';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function ContactForm() {

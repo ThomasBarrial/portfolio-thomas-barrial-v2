@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { ActionType } from '../../../context/Actions';
 import { AppContext } from '../../../context/AppContext';
 import { roadMap } from '../../../data/homepage/roadMap/roadMap';
-import { containerClass } from '../../../styles/containerClass';
 import SlideLeft from '../../animated/SlideLeft';
 import SlideUp from '../../animated/SlideUp';
 
