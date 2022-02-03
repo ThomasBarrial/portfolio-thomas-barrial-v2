@@ -1,6 +1,6 @@
 const partners = [
   {
-    name: 'Jarvis',
+    name: 'JARVIS',
     text: 'Using stable and liquid on-chain fiat currencies to increase financial inclusion and facilitate the access to liquidity and yield to everyone.',
     link: 'https://jarvis.network/',
   },

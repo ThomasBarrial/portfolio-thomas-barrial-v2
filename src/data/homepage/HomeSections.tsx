@@ -12,33 +12,33 @@ import Description from '../../components/hompage/description/Description';
 
 export const homeSections = [
   {
-    id: 'section1',
+    id: 'Home',
     bg: bg as string,
     Component: (): JSX.Element => <Landing />,
   },
   {
-    id: 'section2',
+    id: 'Roadmap',
     bg: bg2 as string,
     Component: (): JSX.Element => <RoadMap />,
   },
   {
-    id: 'section3',
+    id: 'About',
     bg: bg3 as string,
     Component: (): JSX.Element => <Description />,
   },
   {
-    id: 'section4',
+    id: 'Partners',
     bg: bg4 as string,
     Component: (): JSX.Element => <Partners />,
   },
 
   {
-    id: 'section5',
+    id: 'Team',
     bg: bg5 as string,
     Component: (): JSX.Element => <OurTeam />,
   },
   {
-    id: 'section6',
+    id: 'Links',
     bg: bg2 as string,
     Component: (): JSX.Element => <SocialMedia />,
   },

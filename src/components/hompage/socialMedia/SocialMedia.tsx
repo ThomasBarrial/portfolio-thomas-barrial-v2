@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ActionType } from '../../../context/Actions';
 import { AppContext } from '../../../context/AppContext';
-import { containerClass } from '../../../styles/containerClass';
 import SlideUp from '../../animated/SlideUp';
 import data from '../../../data/homepage/socialLinks/socialLinks';
 import SocialIcon from './components/SocialIcon';
@@ -23,7 +22,7 @@ function SocialMedia() {
     if (isAnim) {
       dispatch({
         type: ActionType.SetIndex,
-        payload: 4,
+        payload: 6,
       });
     }
   }, [isAnim]);
