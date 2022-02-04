@@ -38,7 +38,7 @@ function Partners() {
           <SlideUp className={sectionTitleClass} duration={2}>
             Our Partners
           </SlideUp>
-          <SlideUp duration={1.8} className="flex flex-col items-center justify-center lg:flex-row w-9/12  lg:w-full my-10">
+          <SlideUp duration={1.8} className="flex flex-col items-center justify-center lg:flex-row  w-full my-10">
             {partners.map((item) => {
               return (
                 <div className="lg:w-5/12 flex my-5 px-10 lg:border-r lg:border-l" key={item.name}>
