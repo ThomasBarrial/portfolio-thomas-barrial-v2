@@ -49,7 +49,11 @@ function Description() {
             do you have an interesting project to share ?
           </SlideUp>
           <SlideUp className="mt-8 flex flex-col lg:flex-row items-center justify-center" duration={2}>
-            <Button className="mx-10">Read our manifesto</Button>
+            <Button className="mx-10">
+              <a href="https://medium.com/@spendcoin/manifesto-spend-coin-b59653441a15" target={'_blank'}>
+                Read our manifesto
+              </a>
+            </Button>
             <Button onClick={() => dispatchIsContact()} className="mx-10 mt-5 lg:mt-0">
               Contact Us
             </Button>
