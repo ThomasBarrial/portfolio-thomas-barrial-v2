@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import metaImage from '../../../public/metaimage.png';
+import metaImage from '../../../public/metaImage.png';
 
 interface IProps {
   pageTitle: string;
