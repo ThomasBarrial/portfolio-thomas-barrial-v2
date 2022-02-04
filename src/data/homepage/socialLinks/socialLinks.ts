@@ -2,7 +2,7 @@ const data = [
   {
     name: 'Discord',
     icon: '/icons/discordwhite.svg',
-    link: 'https://discord.com/',
+    link: 'https://discord.gg/AS3yhzUFrN',
   },
   {
     name: 'Github',
