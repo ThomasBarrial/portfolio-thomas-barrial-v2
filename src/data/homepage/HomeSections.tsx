@@ -1,21 +1,23 @@
-export const homeSections = [
-  {
-    id: 'Home',
-  },
-  {
-    id: 'Roadmap',
-  },
-  {
-    id: 'About',
-  },
-  {
-    id: 'Partners',
-  },
+const homeSections = [
+    {
+        id: "Home",
+    },
+    {
+        id: "Roadmap",
+    },
+    {
+        id: "About",
+    },
+    {
+        id: "Partners",
+    },
 
-  {
-    id: 'Team',
-  },
-  {
-    id: 'Links',
-  },
+    {
+        id: "Team",
+    },
+    {
+        id: "Links",
+    },
 ];
+
+export default homeSections;
