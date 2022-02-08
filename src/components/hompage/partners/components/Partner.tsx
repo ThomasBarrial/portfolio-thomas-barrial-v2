@@ -4,7 +4,7 @@ interface IProps {
   item: IPartner;
 }
 
-function Partner({ item }: IProps) {
+function Partner({ item }: IProps): JSX.Element {
   return (
     <div className="flex flex-col items-center justify-center text-center">
       <h4 className="font-bold text-xl">{item.name}</h4>
@@ -12,7 +12,7 @@ function Partner({ item }: IProps) {
       <a
         className="bg-transparent z-40 transform   duration-500 hover:border-blue hover:text-blue  text-xs lg:text-base rounded-md border px-10 py-2"
         href={item.link}
-        target={'_blank'}
+        target="_blank"
         rel="noreferrer">
         Voir le site
       </a>

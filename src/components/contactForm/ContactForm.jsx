@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { useisContactFromStore } from '../store/isContactContext.slice';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import { useisContactFromStore } from '../store/isContactContext.slice';
 import Header from './components/Header';
 import Inputs from './components/Inputs';
 import Footer from './components/Footer';
@@ -46,7 +46,12 @@ function ContactForm() {
   };
   return (
     <div className="h-screen w-screen text-white flex justify-end fixed z-50">
-      <button onClick={() => dispatchIsContact()} className="h-screen w-screen absolute z-10 animate-fadeFast  bg-darkBlue bg-opacity-70"></button>
+      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+      <button
+        type="button"
+        onClick={() => dispatchIsContact()}
+        className="h-screen w-screen absolute z-10 animate-fadeFast  bg-darkBlue bg-opacity-70"
+      />
       <motion.div
         variants={variants}
         initial="closed"

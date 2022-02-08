@@ -7,11 +7,10 @@ interface IProps {
 }
 
 function SectionContainer({ children, BG, id }: IProps): JSX.Element {
-  console.log(BG);
   return (
     <div
       id={id}
-      className={`h-full  min-h-screen w-full lg:h-screen font-raleway text-white flex items-start md:items-center lg:items-center justify-center`}
+      className="h-full  min-h-screen w-full lg:h-screen font-raleway text-white flex items-start md:items-center lg:items-center justify-center"
       style={{
         backgroundImage: `url(${BG})`,
         backgroundSize: 'cover',

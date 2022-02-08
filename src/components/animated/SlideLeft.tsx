@@ -11,11 +11,11 @@ function SlideLeft({ children, className, duration }: IProps): JSX.Element {
   const variants = {
     open: {
       x: 0,
-      transition: { type: 'spring', duration: duration, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
     closed: {
       x: '300px',
-      transition: { type: 'spring', duration: duration, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
   };
 

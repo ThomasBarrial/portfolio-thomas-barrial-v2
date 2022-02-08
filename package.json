@@ -10,6 +10,10 @@
     "dependencies": {
         "@reduxjs/toolkit": "^1.6.2",
         "emailjs-com": "^3.2.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base-typescript": "^1.0.0",
+        "eslint-config-airbnb-typescript": "^16.1.0",
+        "firebase": "^9.6.6",
         "framer-motion": "^5.4.1",
         "next": "12.0.4",
         "next-images": "^1.8.4",
@@ -23,10 +27,10 @@
         "smooth-scrollbar": "^8.7.0"
     },
     "devDependencies": {
-        "@types/react-smooth-scrollbar": "^8.0.4",
         "@types/node": "16.11.11",
         "@types/react": "17.0.37",
         "@types/react-dom": "^17.0.0",
+        "@types/react-smooth-scrollbar": "^8.0.4",
         "@typescript-eslint/eslint-plugin": "^4.9.1",
         "@typescript-eslint/parser": "^4.9.1",
         "autoprefixer": "^9",

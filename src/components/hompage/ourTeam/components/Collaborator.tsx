@@ -18,13 +18,11 @@ function Collaborator({ item }: IProps): JSX.Element {
         }}>
         <div className="p-2 flex flex-col justify-end h-full transform duration-700  hover:scale-90">
           <div className="flex mt-2">
-            {item.socialLinks.map((sm) => {
-              return (
-                <div key={sm.icon}>
-                  <SocialMedia sm={sm} />
-                </div>
-              );
-            })}
+            {item.socialLinks.map((sm) => (
+              <div key={sm.icon}>
+                <SocialMedia sm={sm} />
+              </div>
+            ))}
           </div>
           <div>
             <p className="text-sm font-bold">{item.name}</p>

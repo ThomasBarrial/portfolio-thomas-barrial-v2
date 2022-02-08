@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-curly-brace-presence */
+
 import React from 'react';
 import Image from 'next/image';
 import data from '../../../data/homepage/socialLinks/socialLinks';
@@ -10,16 +12,14 @@ function SocialMedia(): JSX.Element {
         Social Media
       </SlideUp>
       <SlideUp duration={1.5} className="text-sm">
-        Don't miss anything, follow us
+        {"Don't miss anything, follow us"}
       </SlideUp>
       <SlideUp duration={1.8} className="flex mt-5">
-        {data.map((item) => {
-          return (
-            <a href={item.link} target={'_blank'} className="mr-4" key={item.name}>
-              <Image src={item.icon} alt={item.name} height={20} width={20} />
-            </a>
-          );
-        })}
+        {data.map((item) => (
+          <a href={item.link} target="_blank" className="mr-4" key={item.name} rel="noreferrer">
+            <Image src={item.icon} alt={item.name} height={20} width={20} />
+          </a>
+        ))}
       </SlideUp>
     </div>
   );

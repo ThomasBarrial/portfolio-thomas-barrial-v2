@@ -9,15 +9,13 @@ function Partners(): JSX.Element {
         Our partners
       </SlideUp>
       <SlideUp duration={1.8}>
-        {partners.map((item) => {
-          return (
-            <div className="my-1" key={item.name}>
-              <a className="text-sm" href={item.link} target={'_blank'} rel="noreferrer">
-                <p className="lowercase underline">{item.name}</p>
-              </a>
-            </div>
-          );
-        })}
+        {partners.map((item) => (
+          <div className="my-1" key={item.name}>
+            <a className="text-sm" href={item.link} target="_blank" rel="noreferrer">
+              <p className="lowercase underline">{item.name}</p>
+            </a>
+          </div>
+        ))}
       </SlideUp>
     </div>
   );

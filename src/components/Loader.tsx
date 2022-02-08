@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import bg from '../../public/bgspendcoin.png';
 import logo from '../../public/logo.png';
-import Image from 'next/image';
 import SlideUp from './animated/SlideUp';
 
 function Loader({ loadAnim }: { loadAnim: string }): JSX.Element {

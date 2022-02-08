@@ -1,14 +1,14 @@
 export enum ActionType {
-    SetIndex,
+  SetIndex,
 }
 
 export interface SetIndex {
-    type: ActionType.SetIndex;
-    payload: number;
+  type: ActionType.SetIndex;
+  payload: number;
 }
 
 export interface SetIsContact {
-    setIsContact: () => void;
+  setIsContact: () => void;
 }
 
 export type AppActions = SetIndex;

@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 interface IProps {
   children?: React.ReactNode;
   className?: string;
-  duration: number;
+  duration?: number;
 }
 
 function SlideRight({ children, className, duration }: IProps): JSX.Element {
   const variants = {
     open: {
       x: 0,
-      transition: { type: 'spring', duration: 1.8, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
     closed: {
       x: '-300px',
-      transition: { type: 'spring', duration: 1.8, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
   };
   return (

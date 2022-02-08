@@ -1,12 +1,12 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 interface IIsLoaderContext {
-    isLoader: boolean;
-    toggleIsLoader?: () => void;
+  isLoader: boolean;
+  toggleIsLoader?: () => void;
 }
 
 const defaultState = {
-    isLoader: false,
+  isLoader: false,
 };
 
 const IsLoaderContext = createContext<IIsLoaderContext>(defaultState);

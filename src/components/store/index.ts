@@ -1,12 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import isContactReducer from "./isContactContext.slice";
+import isContactReducer from './isContactContext.slice';
 
 export const store = configureStore({
-    reducer: { isContact: isContactReducer },
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({ serializableCheck: false }),
-    devTools: true,
+  reducer: { isContact: isContactReducer },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }),
+  devTools: true,
 });
 
 // Redux dependencies types

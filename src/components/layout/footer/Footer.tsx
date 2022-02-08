@@ -1,8 +1,6 @@
-import { useRouter } from 'next/dist/client/router';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useisContactFromStore } from '../../store/isContactContext.slice';
-import bgFooter from '../../../../public/bgFooter.png';
 import SlideUp from '../../animated/SlideUp';
 import Button from '../../buttons/Button';
 import SlideDown from '../../animated/SlideDown';
@@ -13,7 +11,6 @@ import bg3 from '../../../../public/bg3.png';
 function Footer(): JSX.Element {
   const { ref, inView } = useInView();
   const [isAnim, setIsAnim] = useState(true);
-  const router = useRouter();
   const { dispatchIsContact } = useisContactFromStore();
 
   useEffect(() => {
@@ -56,7 +53,7 @@ function Footer(): JSX.Element {
         <div className="flex px-4 lg:px-0 justify-between pt-2 text-xs mt-10 border-t border-pink w-11/12 lg:w-8/12 max-w-content">
           <SlideDown duration={2}>Develop and design by @thomasbarrial</SlideDown>
           <SlideDown duration={2} className="text-right">
-            <a href="https://www.digitalcopilote.io/" target={'_blank'}>
+            <a href="https://www.digitalcopilote.io/" target="_blank" rel="noreferrer">
               Digital Copilote 2022
             </a>
           </SlideDown>

@@ -2,8 +2,6 @@ declare module '*.png';
 
 interface ISection {
   id: string;
-  bg: string;
-  Component?: (data: ISection | null) => JSX.Element;
 }
 
 interface ICollaborator {
@@ -44,4 +42,10 @@ interface IPartner {
   name: string;
   text: string;
   link: string;
+}
+
+interface OurTeamText {
+  id: string;
+  title: string;
+  subtitle: string;
 }

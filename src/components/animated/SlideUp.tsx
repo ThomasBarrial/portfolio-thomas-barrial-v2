@@ -12,12 +12,12 @@ function SlideUp({ children, className, duration }: IProps): JSX.Element {
     open: {
       y: 0,
       scale: 1,
-      transition: { type: 'spring', duration: duration, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
     closed: {
       y: '300px',
       scale: 0.8,
-      transition: { type: 'spring', duration: duration, bounce: 0.1 },
+      transition: { type: 'spring', duration, bounce: 0.1 },
     },
   };
   return (

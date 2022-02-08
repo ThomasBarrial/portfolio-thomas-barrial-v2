@@ -21,19 +21,18 @@ export default function Indicator({ data }: IProps): ReactElement {
   };
 
   return (
-    <div className={`hidden w-32 right-5 top-5 lg:right-20 lg:top-32 fixed lg:flex flex-col items-center align-middle text-blue justify-around `}>
-      {data.map((section, index) => {
-        return (
-          <button type="button" onClick={() => handleClick(section.id)} className="w-full flex justify-start items-center" key={index}>
-            <motion.span
-              initial="close"
-              animate={state.index === index + 1 ? 'open' : 'close'}
-              variants={variants}
-              className={`border border-blue w-3/12 relative my-4`}></motion.span>
-            <p className={`text-xs font-syncopate ml-5 ${state.index === index + 1 && 'font-bold'}`}>{section.id}</p>
-          </button>
-        );
-      })}
+    <div className="hidden w-32 right-5 top-5 lg:right-20 lg:top-32 fixed lg:flex flex-col items-center align-middle text-blue justify-around ">
+      {data.map((section, index) => (
+        <button type="button" onClick={() => handleClick(section.id)} className="w-full flex justify-start items-center" key={section.id}>
+          <motion.span
+            initial="close"
+            animate={state.index === index + 1 ? 'open' : 'close'}
+            variants={variants}
+            className="border border-blue w-3/12 relative my-4"
+          />
+          <p className={`text-xs font-syncopate ml-5 ${state.index === index + 1 && 'font-bold'}`}>{section.id}</p>
+        </button>
+      ))}
     </div>
   );
 }
