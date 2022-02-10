@@ -21,7 +21,7 @@ interface IProps {
     // ourTeamText: OurTeamText;
     // collaborators: ICollaborator[];
     // collaboratorsSocialLinks: ISocialLink[];
-    landing: ILanding;
+    landing: ILanding | null;
     // roadMap: IRoadMap[];
     // about: IAbout;
 }
@@ -93,7 +93,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
             // ourTeamText: ourTeamText as OurTeamText,
             // collaborators: collaborators as ICollaborator[],
             // collaboratorsSocialLinks: collaboratorsSocialLinks as ISocialLink[],
-            landing: landing as ILanding,
+            landing: landing as ILanding | null,
             // roadMap: roadMap as IRoadMap[],
             // about: about as IAbout,
         }, // will be passed to the page component as props
