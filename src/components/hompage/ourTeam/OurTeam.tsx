@@ -6,12 +6,19 @@ import contentClass from "../../../styles/contentClass";
 import SlideUp from "../../animated/SlideUp";
 import SectionContainer from "../../SectionContainer";
 import bg5 from "../../../../public/bg5.png";
+import Collaborator from "./components/Collaborator";
 
 interface IProps {
     ourTeamText: OurTeamText;
+    collaborators: ICollaborator[];
+    collaboratorsSocialLinks: ISocialLink[];
 }
 
-function OurTeam({ ourTeamText }: IProps): JSX.Element {
+function OurTeam({
+    ourTeamText,
+    collaborators,
+    collaboratorsSocialLinks,
+}: IProps): JSX.Element {
     const { ref, inView } = useInView({ threshold: 0.5 });
     const [isAnim, setIsAnim] = useState(true);
     const { dispatch } = useContext(AppContext);
@@ -44,15 +51,21 @@ function OurTeam({ ourTeamText }: IProps): JSX.Element {
                         >
                             {ourTeamText.title}
                         </SlideUp>
-                        {/* <SlideUp duration={2} className="flex flex-wrap items-center justify-center mt-10">
-            {data.collaborators.map((item) => {
-              return (
-                <div key={item.name}>
-                <Collaborator item={item} />
-                </div>
-                );
-              })}
-            </SlideUp> */}
+                        <SlideUp
+                            duration={2}
+                            className="flex flex-wrap items-center justify-center mt-10"
+                        >
+                            {collaborators.map((item) => (
+                                <div key={item.name}>
+                                    <Collaborator
+                                        collaboratorsSocialLinks={
+                                            collaboratorsSocialLinks
+                                        }
+                                        item={item}
+                                    />
+                                </div>
+                            ))}
+                        </SlideUp>
                         <SlideUp
                             duration={1.5}
                             className="font-poppins text-lg mt-10"

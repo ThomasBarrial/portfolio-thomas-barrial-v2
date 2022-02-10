@@ -10,7 +10,7 @@ import { ActionType } from "../../../context/Actions";
 import SectionContainer from "../../SectionContainer";
 import bg from "../../../../public/bgspendcoin.png";
 
-function Landing(): JSX.Element {
+function Landing({ landingData }: { landingData: ILanding }): JSX.Element {
     const { isLoader } = useContext(IsLoaderContext);
     const { ref, inView } = useInView({ threshold: 0.5 });
     const [isAnim, setIsAnim] = useState(true);
@@ -45,44 +45,40 @@ function Landing(): JSX.Element {
                             duration={1.2}
                             className="font-syncopate font-bold text-7xl text-center"
                         >
-                            SPEND COIN
+                            {landingData.websiteTitle}
                         </SlideUp>
                         <SlideUp
                             duration={1.5}
                             className="text-2xl font-poppins mt-2 text-center"
                         >
-                            BUY EVERYTHING WITH CRYPTO
+                            {landingData.subtitle}
                         </SlideUp>
                         <SlideUp
                             duration={2.5}
                             className="mt-10 flex w-full justify-center"
                         >
                             <a
-                                href="https://spend-coin-goodies.vercel.app/"
+                                href={landingData.linkMetashop}
                                 className="bg-transparent z-40 transform   duration-500 hover:border-blue hover:text-blue lg:mx-4 mx-2  text-xs lg:text-base rounded-md border px-10 py-2"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Meta shop
+                                {landingData.buttonMetaShop}
                             </a>
                             <a
-                                href="https://spend-coin-goodies.vercel.app/"
+                                href={landingData.linkWhitepaper}
                                 className="bg-transparent z-40 transform   duration-500 hover:border-blue hover:text-blue lg:mx-4 mx-2  text-xs lg:text-base rounded-md border px-10 py-2"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                White paper
+                                {landingData.buttonWhitePaper}
                             </a>
                         </SlideUp>
                         <SlideUp
                             duration={2}
                             className="text-center  font-thin leading-7 mt-10 lg:mx-20 font-poppins lg:text-lg"
                         >
-                            Spend coin team is focus on building customised
-                            e-shops called meta-shops. As a seller, you’ll be
-                            able to offer decentralized crypto-paiement to your
-                            customers and receive euros or crypto-currencies at
-                            your will.
+                            {landingData.websiteDescription}
                         </SlideUp>
                     </div>
                 )}

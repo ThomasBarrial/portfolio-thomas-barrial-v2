@@ -3,9 +3,10 @@ import SocialMedia from "./SocialMedia";
 
 interface IProps {
     item: ICollaborator;
+    collaboratorsSocialLinks: ISocialLink[];
 }
 
-function Collaborator({ item }: IProps): JSX.Element {
+function Collaborator({ item, collaboratorsSocialLinks }: IProps): JSX.Element {
     return (
         <div className="h-52 w-40 lg:w-40 mx-2 lg:mx-5 my-2 overflow-hidden rounded-md text-left">
             <div
@@ -19,9 +20,11 @@ function Collaborator({ item }: IProps): JSX.Element {
             >
                 <div className="p-2 flex flex-col justify-end h-full transform duration-700  hover:scale-90">
                     <div className="flex mt-2">
-                        {item.socialLinks.map((sm) => (
-                            <div key={sm.icon}>
-                                <SocialMedia sm={sm} />
+                        {collaboratorsSocialLinks.map((sm) => (
+                            <div key={sm.id}>
+                                {item.id === sm.userId && (
+                                    <SocialMedia sm={sm} />
+                                )}
                             </div>
                         ))}
                     </div>

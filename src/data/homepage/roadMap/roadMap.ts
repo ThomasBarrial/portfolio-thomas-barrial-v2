@@ -1,12 +1,12 @@
 const roadMap = [
     {
         name: "ALPHA Private",
-        date: "Friday 14 February",
+        date: "Monday 14 February",
         status: "NEXT",
     },
     {
         name: "ALPHA Public",
-        date: "Friday 28 Junary",
+        date: "Monday 28 February",
         status: "TO DO",
     },
     {

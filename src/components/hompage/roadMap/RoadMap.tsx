@@ -2,14 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { ActionType } from "../../../context/Actions";
 import { AppContext } from "../../../context/AppContext";
-import roadMap from "../../../data/homepage/roadMap/roadMap";
 import contentClass from "../../../styles/contentClass";
 import SlideLeft from "../../animated/SlideLeft";
 import SlideUp from "../../animated/SlideUp";
 import SectionContainer from "../../SectionContainer";
 import bg2 from "../../../../public/bg2.png";
 
-function RoadMap(): JSX.Element {
+function RoadMap({ roadMap }: { roadMap: IRoadMap[] }): JSX.Element {
     const { ref, inView } = useInView({ threshold: 0.5 });
     const [isAnim, setIsAnim] = useState(true);
     const { dispatch } = useContext(AppContext);
@@ -51,12 +50,12 @@ function RoadMap(): JSX.Element {
                         </SlideUp>
                         <div
                             id="roadmap"
-                            className="sb h-36 mt-10 flex transform pb-1 z-20 md:justify-center translate-y-14 lg:translate-y-11 md:translate-y-14 text-xs lg:text-base w-screen  overflow-x-scroll"
+                            className="sb h-36 mt-10 flex transform pb-1 z-20 md:justify-center translate-y-14 lg:translate-y-11 md:translate-y-14 text-xs lg:text-base w-screen  overflow-x-auto lg:overflow-x-hidden"
                         >
                             {roadMap.map((item, index) => (
                                 <SlideLeft
                                     duration={index + 1}
-                                    className={`mx-2 md:mx-7 lg:mx-20 w-24 md:w-28 lg:w-32  flex md:w-content flex-col ${
+                                    className={`mx-2 md:mx-7 lg:mx-20 w-24 md:w-28 lg:w-36  flex md:w-content flex-col ${
                                         item.status === "DONE" &&
                                         "text-gray-400"
                                     } ${
