@@ -18,22 +18,22 @@ import OurTeam from "../src/components/hompage/ourTeam/OurTeam";
 import SocialMedia from "../src/components/hompage/socialMedia/SocialMedia";
 
 interface IProps {
-    ourTeamText: OurTeamText;
-    collaborators: ICollaborator[];
-    collaboratorsSocialLinks: ISocialLink[];
+    // ourTeamText: OurTeamText;
+    // collaborators: ICollaborator[];
+    // collaboratorsSocialLinks: ISocialLink[];
     landing: ILanding;
-    roadMap: IRoadMap[];
-    about: IAbout;
+    // roadMap: IRoadMap[];
+    // about: IAbout;
 }
 
 const Home: NextPage<IProps> = ({
-    ourTeamText,
-    collaborators,
-    collaboratorsSocialLinks,
+    // ourTeamText,
+    // collaborators,
+    // collaboratorsSocialLinks,
     landing,
-    roadMap,
-    about,
-}: IProps) => (
+}: // roadMap,
+// about,
+IProps): JSX.Element => (
     <Layout data={homeSections}>
         <Meta
             pageTitle="SpendCoin"
@@ -42,7 +42,7 @@ const Home: NextPage<IProps> = ({
             keywords=""
         />
         <Landing landingData={landing} />
-        <RoadMap roadMap={roadMap} />
+        {/* <RoadMap roadMap={roadMap} />
         <Description about={about} />
         <Partners />
         <OurTeam
@@ -50,7 +50,7 @@ const Home: NextPage<IProps> = ({
             collaborators={collaborators}
             collaboratorsSocialLinks={collaboratorsSocialLinks}
         />
-        <SocialMedia />
+        <SocialMedia /> */}
     </Layout>
 );
 
@@ -90,12 +90,12 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
 
     return {
         props: {
-            ourTeamText: ourTeamText as OurTeamText,
-            collaborators: collaborators as ICollaborator[],
-            collaboratorsSocialLinks: collaboratorsSocialLinks as ISocialLink[],
+            // ourTeamText: ourTeamText as OurTeamText,
+            // collaborators: collaborators as ICollaborator[],
+            // collaboratorsSocialLinks: collaboratorsSocialLinks as ISocialLink[],
             landing: landing as ILanding,
-            roadMap: roadMap as IRoadMap[],
-            about: about as IAbout,
+            // roadMap: roadMap as IRoadMap[],
+            // about: about as IAbout,
         }, // will be passed to the page component as props
         revalidate: 1440,
     };
