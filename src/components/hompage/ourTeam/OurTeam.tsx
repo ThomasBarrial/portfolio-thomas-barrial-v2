@@ -9,11 +9,13 @@ import bg5 from "../../../../public/bg5.png";
 import Collaborator from "./components/Collaborator";
 
 interface IProps {
+    ourTeamText: OurTeamText;
     collaborators: ICollaborator[];
     collaboratorsSocialLinks: ISocialLink[];
 }
 
 function OurTeam({
+    ourTeamText,
     collaborators,
     collaboratorsSocialLinks,
 }: IProps): JSX.Element {
@@ -43,12 +45,12 @@ function OurTeam({
             <div ref={ref} className={`${contentClass} text-center`}>
                 {isAnim && (
                     <div className="w-full flex flex-col items-center justify-center">
-                        {/* <SlideUp
+                        <SlideUp
                             duration={1.5}
                             className="font-syncopate font-bold text-4xl md:text-5xl"
                         >
-                            {ourTeamText?.title}
-                        </SlideUp> */}
+                            {ourTeamText.title}
+                        </SlideUp>
                         <SlideUp
                             duration={2}
                             className="flex flex-wrap items-center justify-center mt-10"
@@ -64,12 +66,12 @@ function OurTeam({
                                 </div>
                             ))}
                         </SlideUp>
-                        {/* <SlideUp
+                        <SlideUp
                             duration={1.5}
                             className="font-poppins text-lg mt-10"
                         >
-                            {ourTeamText?.subtitle}
-                        </SlideUp> */}
+                            {ourTeamText.subtitle}
+                        </SlideUp>
                     </div>
                 )}
             </div>
