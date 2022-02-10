@@ -9,7 +9,7 @@ import bg5 from "../../../../public/bg5.png";
 import Collaborator from "./components/Collaborator";
 
 interface IProps {
-    ourTeamText: OurTeamText;
+    ourTeamText: OurTeamText | undefined;
     collaborators: ICollaborator[];
     collaboratorsSocialLinks: ISocialLink[];
 }
@@ -49,7 +49,7 @@ function OurTeam({
                             duration={1.5}
                             className="font-syncopate font-bold text-4xl md:text-5xl"
                         >
-                            {ourTeamText.title}
+                            {ourTeamText?.title}
                         </SlideUp>
                         <SlideUp
                             duration={2}
@@ -70,7 +70,7 @@ function OurTeam({
                             duration={1.5}
                             className="font-poppins text-lg mt-10"
                         >
-                            {ourTeamText.subtitle}
+                            {ourTeamText?.subtitle}
                         </SlideUp>
                     </div>
                 )}

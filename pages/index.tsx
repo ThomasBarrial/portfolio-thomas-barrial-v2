@@ -18,7 +18,7 @@ import OurTeam from "../src/components/hompage/ourTeam/OurTeam";
 import SocialMedia from "../src/components/hompage/socialMedia/SocialMedia";
 
 interface IProps {
-    ourTeamText: OurTeamText;
+    ourTeamText: OurTeamText | undefined;
     collaborators: ICollaborator[];
     collaboratorsSocialLinks: ISocialLink[];
     landing: ILanding;
@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
 
     return {
         props: {
-            ourTeamText: ourTeamText as OurTeamText,
+            ourTeamText: ourTeamText as OurTeamText | undefined,
             collaborators: collaborators as ICollaborator[],
             collaboratorsSocialLinks: collaboratorsSocialLinks as ISocialLink[],
             landing: landing as ILanding,
