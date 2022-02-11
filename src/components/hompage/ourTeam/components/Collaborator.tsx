@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia";
 
 interface IProps {
     item: ICollaborator;
-    collaboratorsSocialLinks: ISocialLink[];
+    collaboratorsSocialLinks: ICollaboratorSocialLink[];
 }
 
 function Collaborator({ item, collaboratorsSocialLinks }: IProps): JSX.Element {

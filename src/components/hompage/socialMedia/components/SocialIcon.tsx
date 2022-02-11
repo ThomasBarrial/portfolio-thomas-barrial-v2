@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 interface IProps {
-    item: ISocialIcon;
+    item: ISocialLink;
 }
 
 function SocialIcon({ item }: IProps): JSX.Element {

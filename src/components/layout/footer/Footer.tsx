@@ -8,7 +8,12 @@ import SocialMedia from "./SocialMedia";
 import Partners from "./Partners";
 import bg3 from "../../../../public/bg3.png";
 
-function Footer(): JSX.Element {
+interface IProps {
+    partners: IPartner[];
+    socialLinks: ISocialLink[];
+}
+
+function Footer({ partners, socialLinks }: IProps): JSX.Element {
     const { ref, inView } = useInView();
     const [isAnim, setIsAnim] = useState(true);
     const { dispatchIsContact } = useisContactFromStore();
@@ -34,11 +39,11 @@ function Footer(): JSX.Element {
         >
             {isAnim && (
                 <div className="text-pink flex w-11/12 lg:py-16 flex-row flex-wrap justify-around items-center  lg:w-8/12 max-w-content">
-                    <div className="w-6/12 lg:h-32 lg:w-1/6 lg:border-l lg:border-r px-2 lg:px-8">
-                        <Partners />
+                    <div className="w-6/12 lg:h-32 lg:w-2/12 lg:border-l lg:border-r px-2 lg:px-8">
+                        <Partners partners={partners} />
                     </div>
                     <div className="w-6/12 lg:h-32 lg:w-2/6  lg:border-r lg:px-8">
-                        <SocialMedia />
+                        <SocialMedia socialLinks={socialLinks} />
                     </div>
                     <div className="w-full lg:h-32 mt-5 lg:mt-0 lg:w-3/6  lg:border-r lg:px-8 border-pink">
                         <SlideUp duration={1.5}>

@@ -1,8 +1,11 @@
 import React from "react";
-import partners from "../../../data/homepage/partners/partners";
 import SlideUp from "../../animated/SlideUp";
 
-function Partners(): JSX.Element {
+interface IProps {
+    partners: IPartner[];
+}
+
+function Partners({ partners }: IProps): JSX.Element {
     return (
         <div>
             <SlideUp duration={1.2} className="font-bold">

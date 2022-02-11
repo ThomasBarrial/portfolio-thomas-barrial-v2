@@ -20,10 +20,14 @@ import SocialMedia from "../src/components/hompage/socialMedia/SocialMedia";
 interface IProps {
     ourTeamText: OurTeamText;
     collaborators: ICollaborator[];
-    collaboratorsSocialLinks: ISocialLink[];
+    collaboratorsSocialLinks: ICollaboratorSocialLink[];
     landing: ILanding;
     roadMap: IRoadMap[];
     about: IAbout;
+    partners: IPartner[];
+    partnersText: IPartnerText;
+    socialLinks: ISocialLink[];
+    socialLinksText: ISocialLinkText;
 }
 
 const Home: NextPage<IProps> = ({
@@ -33,24 +37,31 @@ const Home: NextPage<IProps> = ({
     landing,
     roadMap,
     about,
+    partners,
+    partnersText,
+    socialLinks,
+    socialLinksText,
 }: IProps): JSX.Element => (
-    <Layout data={homeSections}>
+    <Layout partners={partners} socialLinks={socialLinks} data={homeSections}>
         <Meta
             pageTitle="SpendCoin"
             title="Buy Everything with crypto"
             description="Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized crypto-paiement to your customers and receive euros or crypto-currencies at your will."
-            keywords=""
+            keywords="crypto payment metamask ecommerce decentralized metashop spendcoin woocommerce purchase buy cryptocurrency cryptomonnaie"
         />
         <Landing landingData={landing} />
         <RoadMap roadMap={roadMap} />
         <Description about={about} />
-        <Partners />
+        <Partners partners={partners} partnersText={partnersText} />
         <OurTeam
             ourTeamText={ourTeamText}
             collaborators={collaborators}
             collaboratorsSocialLinks={collaboratorsSocialLinks}
         />
-        <SocialMedia />
+        <SocialMedia
+            socialLinks={socialLinks}
+            socialLinksText={socialLinksText}
+        />
     </Layout>
 );
 
@@ -74,6 +85,14 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
     const resroadMap = await getDocs(roadMapRef);
     const aboutRef = collection(db, "about");
     const resAbout = await getDocs(aboutRef);
+    const partnersRef = collection(db, "partners");
+    const resPartners = await getDocs(partnersRef);
+    const partnersTextRef = collection(db, "ourPartnersText");
+    const resPartnersText = await getDocs(partnersTextRef);
+    const socialLinksRef = collection(db, "socialLinks");
+    const resSocialLinks = await getDocs(socialLinksRef);
+    const socialLinksTextRef = collection(db, "socialLinksText");
+    const resSocialLinksText = await getDocs(socialLinksTextRef);
 
     const getDocuments = (res: QuerySnapshot<DocumentData>) =>
         res.docs.map((doc) => ({
@@ -87,15 +106,24 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
     const landing = getDocuments(resLanding)[0];
     const roadMap = getDocuments(resroadMap);
     const about = getDocuments(resAbout)[0];
+    const partners = getDocuments(resPartners);
+    const partnersText = getDocuments(resPartnersText)[0];
+    const socialLinks = getDocuments(resSocialLinks);
+    const socialLinksText = getDocuments(resSocialLinksText)[0];
 
     return {
         props: {
             ourTeamText: ourTeamText as OurTeamText,
             collaborators: collaborators as ICollaborator[],
-            collaboratorsSocialLinks: collaboratorsSocialLinks as ISocialLink[],
+            collaboratorsSocialLinks:
+                collaboratorsSocialLinks as ICollaboratorSocialLink[],
             landing: landing as ILanding,
             roadMap: roadMap as IRoadMap[],
             about: about as IAbout,
+            partners: partners as IPartner[],
+            partnersText: partnersText as IPartnerText,
+            socialLinks: socialLinks as ISocialLink[],
+            socialLinksText: socialLinksText as ISocialLinkText,
         }, // will be passed to the page component as props
         revalidate: 1440,
     };

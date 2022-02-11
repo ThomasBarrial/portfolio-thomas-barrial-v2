@@ -12,8 +12,10 @@ interface ICollaborator {
 }
 
 interface ISocialLink {
+    id: string;
     icon: string;
     link: string;
+    name?: string;
 }
 interface IDate {
     name: string;
@@ -21,23 +23,17 @@ interface IDate {
 }
 
 interface ICollaborator {
+    id: string;
     name: string;
     image: string;
     profilTitle: string;
-    socialLinks: ISocialLink[];
 }
 
-interface ISocialLink {
+interface ICollaboratorSocialLink {
     id: string;
     icon: string;
     link: string;
     userId: string;
-}
-
-interface ISocialIcon {
-    name: string;
-    icon: string;
-    link: string;
 }
 
 interface IPartner {
@@ -77,4 +73,23 @@ interface IAbout {
     text2: string;
     title1: string;
     title2: string;
+}
+
+interface IPartner {
+    id: string;
+    name: string;
+    link: string;
+    text: string;
+}
+
+interface IPartnerText {
+    id: string;
+    title: string;
+    subtitle: string;
+}
+
+interface ISocialLinkText {
+    id: string;
+    title: string;
+    subtitle: string;
 }

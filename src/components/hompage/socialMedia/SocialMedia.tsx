@@ -3,13 +3,17 @@ import { useInView } from "react-intersection-observer";
 import { ActionType } from "../../../context/Actions";
 import { AppContext } from "../../../context/AppContext";
 import SlideUp from "../../animated/SlideUp";
-import data from "../../../data/homepage/socialLinks/socialLinks";
 import SocialIcon from "./components/SocialIcon";
 import contentClass from "../../../styles/contentClass";
 import SectionContainer from "../../SectionContainer";
 import bg2 from "../../../../public/bg2.png";
 
-function SocialMedia(): JSX.Element {
+interface IProps {
+    socialLinks: ISocialLink[];
+    socialLinksText: ISocialLinkText;
+}
+
+function SocialMedia({ socialLinks, socialLinksText }: IProps): JSX.Element {
     const { ref, inView } = useInView({ threshold: 0.5 });
     const [isAnim, setIsAnim] = useState(true);
     const { dispatch } = useContext(AppContext);
@@ -38,13 +42,13 @@ function SocialMedia(): JSX.Element {
                             duration={1}
                             className="font-syncopate font-bold text-4xl md:text-5xl"
                         >
-                            OUR SOCIAL LINKS
+                            {socialLinksText.title}
                         </SlideUp>
                         <SlideUp
                             duration={1.5}
                             className="flex items-center justify-center my-10"
                         >
-                            {data.map((item) => (
+                            {socialLinks.map((item) => (
                                 <div key={item.name}>
                                     <SocialIcon item={item} />
                                 </div>
@@ -54,11 +58,7 @@ function SocialMedia(): JSX.Element {
                             duration={2}
                             className="font-poppins text-md md:text-lg mx-4"
                         >
-                            To be aware of the latest news follow us on our
-                            social medias. If you have a special request or if
-                            you want to receive all spend coin news directly
-                            into your email box ask us through and we’ll add you
-                            to our newsletter.
+                            {socialLinksText.subtitle}
                         </SlideUp>
                     </div>
                 )}

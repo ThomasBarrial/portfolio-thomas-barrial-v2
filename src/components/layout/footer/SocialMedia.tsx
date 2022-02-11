@@ -2,10 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-import data from "../../../data/homepage/socialLinks/socialLinks";
 import SlideUp from "../../animated/SlideUp";
 
-function SocialMedia(): JSX.Element {
+interface IProps {
+    socialLinks: ISocialLink[];
+}
+
+function SocialMedia({ socialLinks }: IProps): JSX.Element {
     return (
         <div className="text-left">
             <SlideUp duration={1.2} className="font-bold">
@@ -15,7 +18,7 @@ function SocialMedia(): JSX.Element {
                 {"Don't miss anything, follow us"}
             </SlideUp>
             <SlideUp duration={1.8} className="flex mt-5">
-                {data.map((item) => (
+                {socialLinks.map((item) => (
                     <a
                         href={item.link}
                         target="_blank"

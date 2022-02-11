@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import sectionTitleClass from "../../../styles/sectionTitleClass";
 import SlideUp from "../../animated/SlideUp";
-import partners from "../../../data/homepage/partners/partners";
+
 import Partner from "./components/Partner";
 import { AppContext } from "../../../context/AppContext";
 import { ActionType } from "../../../context/Actions";
@@ -11,7 +11,12 @@ import contentClass from "../../../styles/contentClass";
 import SectionContainer from "../../SectionContainer";
 import bg4 from "../../../../public/bg4.png";
 
-function Partners(): JSX.Element {
+interface IProps {
+    partners: IPartner[];
+    partnersText: IPartnerText;
+}
+
+function Partners({ partners, partnersText }: IProps): JSX.Element {
     const { dispatchIsContact } = useisContactFromStore();
     const { ref, inView } = useInView({ threshold: 0.5 });
     const [isAnim, setIsAnim] = useState(true);
@@ -39,7 +44,7 @@ function Partners(): JSX.Element {
                 {isAnim && (
                     <div className="w-full text-center ">
                         <SlideUp className={sectionTitleClass} duration={2}>
-                            Our Partners
+                            {partnersText.title}
                         </SlideUp>
                         <SlideUp
                             duration={1.8}
@@ -58,8 +63,7 @@ function Partners(): JSX.Element {
                             duration={1.5}
                             className="font-poppins uppercase text-lg mx-4"
                         >
-                            Want to take part of the project ? Contact us to
-                            become partner
+                            {partnersText.subtitle}
                         </SlideUp>
                         <SlideUp duration={1.5} className="font-poppins mt-2">
                             <button

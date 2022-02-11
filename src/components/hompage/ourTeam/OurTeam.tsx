@@ -11,7 +11,7 @@ import Collaborator from "./components/Collaborator";
 interface IProps {
     ourTeamText: OurTeamText;
     collaborators: ICollaborator[];
-    collaboratorsSocialLinks: ISocialLink[];
+    collaboratorsSocialLinks: ICollaboratorSocialLink[];
 }
 
 function OurTeam({
