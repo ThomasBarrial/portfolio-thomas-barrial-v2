@@ -32,6 +32,23 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
                         rel="stylesheet"
                     />
+                    <script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.FIREBASE_MEASUREMENTID}`}
+                    />
+                    <script
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.FIREBASE_MEASUREMENTID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+                        }}
+                    />
                 </Head>
                 <body>
                     <Main />
