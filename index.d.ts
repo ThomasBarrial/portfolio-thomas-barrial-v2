@@ -13,7 +13,6 @@ interface ICollaborator {
 
 interface ISocialLink {
     id: string;
-    icon: string;
     link: string;
     name?: string;
 }

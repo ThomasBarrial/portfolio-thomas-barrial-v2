@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 
 import React from "react";
-import Image from "next/image";
+
 import SlideUp from "../../animated/SlideUp";
+
+import Icon from "./Icon";
 
 interface IProps {
     socialLinks: ISocialLink[];
@@ -26,12 +28,7 @@ function SocialMedia({ socialLinks }: IProps): JSX.Element {
                         key={item.name}
                         rel="noreferrer"
                     >
-                        <Image
-                            src={item.icon}
-                            alt={item.name}
-                            height={20}
-                            width={20}
-                        />
+                        <Icon name={item.name} />
                     </a>
                 ))}
             </SlideUp>
