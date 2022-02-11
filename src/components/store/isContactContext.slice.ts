@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 
-interface isContactState {
+interface IContactState {
     active: boolean;
 }
 
 // TODO: Improve dispatch types
 interface ReturnIsContactFromStore {
-    isContact: isContactState;
+    isContact: IContactState;
     dispatchIsContact: () => {
         type: string;
     };
 }
 
-const initialState: isContactState = {
+const initialState: IContactState = {
     active: false,
 };
 
@@ -21,9 +21,7 @@ export const isContactSlice = createSlice({
     name: "isContact",
     initialState,
     reducers: {
-        setIsContact: (state) => {
-            return { ...state, active: !state.active };
-        },
+        setIsContact: (state) => ({ ...state, active: !state.active }),
     },
 });
 

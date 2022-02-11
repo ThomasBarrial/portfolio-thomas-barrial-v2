@@ -11,11 +11,11 @@ function SlideDown({ children, className, duration }: IProps): JSX.Element {
     const variants = {
         open: {
             y: 0,
-            transition: { type: "spring", duration: duration, bounce: 0.1 },
+            transition: { type: "spring", duration, bounce: 0.1 },
         },
         closed: {
             y: "-300px",
-            transition: { type: "spring", duration: duration, bounce: 0.1 },
+            transition: { type: "spring", duration, bounce: 0.1 },
         },
     };
     return (

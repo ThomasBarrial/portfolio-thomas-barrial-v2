@@ -1,0 +1,13 @@
+node_modules
+generated
+next.config.js
+tailwind.config.js
+postcss.config.js
+sw.js
+sw.js.map
+captain-definition
+workbox-.js
+jest.config.js
+jest.setup.js
+tests/**/.js
+tests/*.js

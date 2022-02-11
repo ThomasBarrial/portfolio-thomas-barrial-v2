@@ -8,16 +8,23 @@ import ContactForm from "../contactForm/ContactForm";
 interface IProps {
     data: ISection[];
     children: React.ReactNode;
+    partners: IPartner[];
+    socialLinks: ISocialLink[];
 }
 
-function Layout({ data, children }: IProps): JSX.Element {
+function Layout({
+    data,
+    children,
+    partners,
+    socialLinks,
+}: IProps): JSX.Element {
     const { isContact } = useisContactFromStore();
     return (
         <div>
             {isContact.active && <ContactForm />}
             <Indicator data={data} />
             {children}
-            <Footer />
+            <Footer partners={partners} socialLinks={socialLinks} />
             <Backtop />
         </div>
     );

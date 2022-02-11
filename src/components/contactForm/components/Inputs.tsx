@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Dispatch, SetStateAction } from "react";
 
 interface IProps {
@@ -43,8 +44,9 @@ function Inputs({
                     </p>
                 )}
             </label>
-            <label className="font-bold flex flex-col mt-8">
+            <label htmlFor="textarea" className="font-bold flex flex-col mt-8">
                 <textarea
+                    id="textarea"
                     className="mt-2 h-32 text-ms border bg-transparent border-pink rounded-sm p-2 focus:outline-none"
                     name="message"
                     placeholder="Message"
