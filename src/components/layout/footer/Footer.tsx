@@ -6,7 +6,6 @@ import Button from "../../buttons/Button";
 import SlideDown from "../../animated/SlideDown";
 import SocialMedia from "./SocialMedia";
 import Partners from "./Partners";
-import bg3 from "../../../../public/bg3.png";
 
 interface IProps {
     partners: IPartner[];
@@ -30,10 +29,8 @@ function Footer({ partners, socialLinks }: IProps): JSX.Element {
         <div
             className="flex  min-h-container w-screen  flex-col items-center justify-center text-white border-t border-b border-blue bg-blue shadow-container bg-opacity-5 py-24"
             style={{
-                backgroundImage: `url(${bg3})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                backgroundRepeat: "no-repeat",
+                background:
+                    "linear-gradient(150.0deg, #174B75 0%, #000101 94.37%)",
             }}
             ref={ref}
         >

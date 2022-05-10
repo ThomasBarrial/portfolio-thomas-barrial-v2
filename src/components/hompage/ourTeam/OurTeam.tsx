@@ -3,7 +3,6 @@ import React from "react";
 // import { AppContext } from "../../../context/AppContext";
 import contentClass from "../../../styles/contentClass";
 import SectionContainer from "../../SectionContainer";
-import bg5 from "../../../../public/bg5.png";
 
 function OurTeam(): JSX.Element {
     // const { dispatch } = useContext(AppContext);
@@ -15,8 +14,8 @@ function OurTeam(): JSX.Element {
     // }, []);
 
     return (
-        <SectionContainer id="Team" BG={bg5}>
-            <div className={`${contentClass} text-center`}>Section4</div>
+        <SectionContainer id="Team" BG="top">
+            <div className={`${contentClass} text-center`}>Section5</div>
         </SectionContainer>
     );
 }

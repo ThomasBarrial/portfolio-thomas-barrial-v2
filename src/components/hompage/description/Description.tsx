@@ -3,7 +3,6 @@ import React from "react";
 // import { AppContext } from "../../../context/AppContext";
 import contentClass from "../../../styles/contentClass";
 import SectionContainer from "../../SectionContainer";
-import bg3 from "../../../../public/bg3.png";
 
 function Description(): JSX.Element {
     // const { dispatch } = useContext(AppContext);
@@ -16,7 +15,7 @@ function Description(): JSX.Element {
     // }, []);
 
     return (
-        <SectionContainer id="About" BG={bg3}>
+        <SectionContainer id="About" BG="top">
             <div className={contentClass}>section3</div>
         </SectionContainer>
     );

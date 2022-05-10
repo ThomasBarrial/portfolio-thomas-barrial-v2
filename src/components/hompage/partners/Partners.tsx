@@ -3,7 +3,6 @@ import React from "react";
 // import { ActionType } from "../../../context/Actions";
 import contentClass from "../../../styles/contentClass";
 import SectionContainer from "../../SectionContainer";
-import bg4 from "../../../../public/bg4.png";
 
 function Partners(): JSX.Element {
     // const { dispatch } = useContext(AppContext);
@@ -15,8 +14,8 @@ function Partners(): JSX.Element {
     //     });
     // }, []);
     return (
-        <SectionContainer id="Partners" BG={bg4}>
-            <div className={contentClass}>Section5</div>
+        <SectionContainer id="Partners" BG="bot">
+            <div className={contentClass}>Section4</div>
         </SectionContainer>
     );
 }

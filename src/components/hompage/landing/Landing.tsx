@@ -3,7 +3,6 @@ import contentClass from "../../../styles/contentClass";
 // import { AppContext } from "../../../context/AppContext";
 // import { ActionType } from "../../../context/Actions";
 import SectionContainer from "../../SectionContainer";
-import bg from "../../../../public/bgspendcoin.png";
 
 function Landing(): JSX.Element {
     // const { dispatch } = useContext(AppContext);
@@ -15,7 +14,7 @@ function Landing(): JSX.Element {
     // }, []);
 
     return (
-        <SectionContainer id="Home" BG={bg}>
+        <SectionContainer id="Home" BG="top">
             <div className={`${contentClass} font-poppins text-center`}>
                 HomeSection
             </div>
