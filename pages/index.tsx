@@ -14,7 +14,7 @@ import Solution from "../src/components/hompage/solution/Solution";
 import OurTeam from "../src/components/hompage/ourTeam/OurTeam";
 import SocialMedia from "../src/components/hompage/socialMedia/SocialMedia";
 import Product from "../src/components/hompage/product/Product";
-import RoadMap from "../src/components/hompage/roadmap/RoadMap";
+import RoadMap from "../src/components/roadmap/RoadMap";
 
 interface IProps {
     partners: IPartner[];

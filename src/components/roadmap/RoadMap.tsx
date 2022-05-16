@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import contentClass from "../../../styles/contentClass";
-import SlideUp from "../../animated/SlideUp";
-import SectionContainer from "../../SectionContainer";
-import TitleSection from "../../TitleSection";
+import contentClass from "../../styles/contentClass";
+import SlideUp from "../animated/SlideUp";
+import SectionContainer from "../SectionContainer";
+import TitleSection from "../TitleSection";
 
 function RoadMap({ data }: { data: IRoadMap[] }): JSX.Element {
     const { ref, inView } = useInView({ threshold: 0.2 });
