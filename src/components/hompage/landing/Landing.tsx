@@ -6,7 +6,7 @@ import SectionContainer from "../../SectionContainer";
 import Button from "../../buttons/Button";
 
 function Landing(): JSX.Element {
-    const { ref, inView } = useInView({ threshold: 0.5 });
+    const { ref, inView } = useInView({ threshold: 0.2 });
     const [isAnim, setIsAnim] = useState(true);
 
     const handleClick = (id: string) => {

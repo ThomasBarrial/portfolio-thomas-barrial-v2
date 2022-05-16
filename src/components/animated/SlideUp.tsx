@@ -19,7 +19,7 @@ function SlideUp({ children, className, duration }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
             <motion.div
                 className={className}
                 variants={variants}
