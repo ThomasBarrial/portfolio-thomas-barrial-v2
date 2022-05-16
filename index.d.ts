@@ -58,12 +58,12 @@ interface ILanding {
     buttonWhitePaper: string;
 }
 
-interface IRoadMap {
-    id: string;
-    name: sting;
-    status: string;
-    date: string;
-}
+// interface IRoadMap {
+//     id: string;
+//     name: sting;
+//     status: string;
+//     date: string;
+// }
 
 interface IAbout {
     id: string;
@@ -91,4 +91,30 @@ interface ISocialLinkText {
     id: string;
     title: string;
     subtitle: string;
+}
+
+interface ISolution {
+    id: string;
+    title: string;
+    text1: string;
+    text2: string;
+    text3: string;
+    argument1: string;
+    argument2: string;
+    argument3: srting;
+    buttonName: string;
+    buttonLink: string;
+}
+
+interface IProduct {
+    id: string;
+    title: string;
+    image: string;
+    imageMobile: string;
+}
+
+interface IRoadMap {
+    id: string;
+    title: string;
+    text: string;
 }

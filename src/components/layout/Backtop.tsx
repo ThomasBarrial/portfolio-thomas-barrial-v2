@@ -28,7 +28,7 @@ function Backtop(): JSX.Element {
         <button
             type="button"
             onClick={() => scrollToTop()}
-            className="flex items-center fixed bottom-8 text-blue right-44 lg:right-56"
+            className="flex items-center fixed bottom-8 text-blue right-10 lg:right-56"
         >
             {visible && (
                 <p className="hidden animate-fadeIn lg:flex">back to the top</p>

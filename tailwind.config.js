@@ -6,11 +6,16 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            margin: {
+                "30px": "30px",
+            },
             colors: {
                 darkBlue: "#00253E",
                 lightBlue: "#194C6D",
                 blue: "#04A7F0",
                 white: "#F8F5F1",
+                purple: "#9658E4",
+                green: "#38A795",
             },
             maxWidth: {
                 content: "1000px",
@@ -32,13 +37,14 @@ module.exports = {
                 header: "28rem",
                 line: "1px",
                 footer: "32rem",
+                roadMap: "40rem",
             },
             boxShadow: {
                 container: "0px 10px 20px rgba(0, 0, 0, 0.25)",
                 contactForm: "-20px 4px 20px rgba(0, 0, 0, 0.15);",
             },
             fontFamily: {
-                syncopate: ["Syncopate", "sans-serif"],
+                roboto: ["Roboto Condensed", "sans-serif"],
                 poppins: ["Poppins", "sans-serif"],
             },
             screens: {
