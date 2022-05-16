@@ -118,3 +118,19 @@ interface IRoadMap {
     title: string;
     text: string;
 }
+
+interface ITokenomics {
+    id: string;
+    title: string;
+    data1: string;
+    data1Details: string;
+    data2Details: string;
+    data3Details: string;
+    data2: string;
+    data3: string;
+    data4: string;
+    data5: string;
+    image: string;
+    token: string;
+    tokenID: string;
+}

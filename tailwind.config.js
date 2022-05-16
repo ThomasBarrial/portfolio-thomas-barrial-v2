@@ -11,8 +11,11 @@ module.exports = {
             },
             colors: {
                 darkBlue: "#00253E",
-                lightBlue: "#194C6D",
+                lightBlue: "#00FFFF",
+                ultraLightBlue: "#99FFFC",
+                smoothBlue: "#3A81AD",
                 blue: "#04A7F0",
+                hardBlue: "#174B75",
                 white: "#F8F5F1",
                 purple: "#9658E4",
                 green: "#38A795",
@@ -57,8 +60,13 @@ module.exports = {
                 fadeOut: "fadeOut ease-out 1s",
                 fadeBg: "fadeBg ease-in-out 2s",
                 fadeFast: "fadeIn ease-in-out 0.5s",
+                scaleUp: "scaleUp ease-in 0.5s",
             },
             keyframes: {
+                scaleUp: {
+                    "0%": { scale: 0 },
+                    "100%": { scale: 100 },
+                },
                 fadeIn: {
                     "0%": { opacity: 0 },
                     "100%": { opacity: 1 },
