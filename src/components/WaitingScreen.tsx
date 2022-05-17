@@ -13,18 +13,25 @@ function WaitingScreen(): JSX.Element {
                     "linear-gradient(150.0deg, #174B75 0%, #000101 94.37%)",
             }}
         >
-            <Image src="/landingImage.png" width={560} height={573} priority />
+            <div>
+                <Image
+                    src="/landingImage.png"
+                    width={560}
+                    height={573}
+                    priority
+                />
+            </div>
 
-            <div className="animate-rotateInfinite mt-5">
+            <div className="animate-rotateInfinite mt-5 ">
                 <Image src="/Settings.png" height={50} width={50} />
             </div>
             <h4 className="text-4xl animate-pulse mt-2">
-                The webiste is building ...
+                Webiste coming soon ...
             </h4>
 
             <Button
                 onClick={() => dispatchIsContact()}
-                className="mt-5 w-full lg:w-4/12 flex items-center mb-32 justify-center"
+                className="mt-10 w-full lg:w-4/12 flex items-center mb-44 justify-center"
             >
                 ContactUs
             </Button>
