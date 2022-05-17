@@ -39,7 +39,7 @@ function Landing(): JSX.Element {
                             priority
                         />
 
-                        <div className="mt-10 lg:mt-10 lg:mb-24 md:flex">
+                        {/* <div className="mt-10 lg:mt-10 lg:mb-24 md:flex">
                             <Button
                                 onClick={() => handleClick("Solution")}
                                 className="w-10/12 md:w-64 my-3 py-3 md:mx-8"
@@ -52,7 +52,7 @@ function Landing(): JSX.Element {
                             <Button className="w-10/12 md:w-64 my-3 py-3 md:mx-8">
                                 ROADMAP
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                 )}
             </div>

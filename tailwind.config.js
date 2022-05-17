@@ -61,8 +61,13 @@ module.exports = {
                 fadeBg: "fadeBg ease-in-out 2s",
                 fadeFast: "fadeIn ease-in-out 0.5s",
                 scaleUp: "scaleUp ease-in 0.5s",
+                rotateInfinite: "rotate linear infinite 5s",
             },
             keyframes: {
+                rotate: {
+                    "0%": { rotate: "0deg" },
+                    "100%": { rotate: "360deg" },
+                },
                 scaleUp: {
                     "0%": { scale: 0 },
                     "100%": { scale: 100 },

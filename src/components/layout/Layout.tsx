@@ -6,6 +6,7 @@ import ContactForm from "../contactForm/ContactForm";
 import Navbar from "./Navbar";
 import Burger from "./Burger";
 import Sidebar from "./Sidebar";
+import WaitingScreen from "../WaitingScreen";
 // import SmoothScrollComponent from "./SmoothScrollComponent";
 
 interface IProps {
@@ -20,6 +21,7 @@ function Layout({ children, partners, socialLinks }: IProps): JSX.Element {
     return (
         <div>
             {isContact.active && <ContactForm />}
+            <WaitingScreen />
             <Navbar socialLinks={socialLinks} />
             <Burger isActive={isActive} setIsActive={setIsActive} />
             <Sidebar

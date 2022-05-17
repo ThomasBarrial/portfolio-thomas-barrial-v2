@@ -39,7 +39,7 @@ const Home: NextPage<IProps> = ({
         <Meta
             pageTitle="Metashop"
             title="Buy Everything with crypto"
-            description="Spend coin team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized crypto-paiement to your customers and receive euros or crypto-currencies at your will."
+            description="Metashop team is focus on building customised e-shops called meta-shops. As a seller, you’ll be able to offer decentralized crypto-paiement to your customers and receive euros or crypto-currencies at your will."
             keywords="crypto payment metamask ecommerce decentralized metashop spendcoin woocommerce purchase buy cryptocurrency cryptomonnaie"
         />
         <Landing />
