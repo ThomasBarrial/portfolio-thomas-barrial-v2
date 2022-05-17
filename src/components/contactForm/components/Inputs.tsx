@@ -19,7 +19,7 @@ function Inputs({
             <label className="font-bold flex flex-col mt-10">
                 <input
                     className="text-ms border-b bg-transparent border-pink rounded-sm py-2 focus:outline-none"
-                    placeholder="Noms"
+                    placeholder="Name"
                     type="text"
                     name="user_name"
                     onChange={(e) => setName(e.target.value)}

@@ -10,7 +10,7 @@ function Header({ close }: { close: string }): JSX.Element {
             {" "}
             <div className="w-full flex justify-between items-center">
                 <div className="font-bold text-3xl lg:text-3xl lg:mt-5 mb-0 my-5">
-                    Nous Contacter
+                    Contact Us
                 </div>
                 <motion.button
                     animate={{ rotate: -90 }}
@@ -21,8 +21,8 @@ function Header({ close }: { close: string }): JSX.Element {
                 </motion.button>
             </div>
             <div className="text-sm mt-2">
-                Pour toute demande professionnelle veuillez remplir les champs
-                ci-dessous et notre équipe vous répondra dès que possible
+                For any professional request, please fill in the fields below
+                and our team will get back to you as soon as possible.
             </div>
         </div>
     );
