@@ -25,7 +25,7 @@ class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link rel="icon" href="/favicon.ico" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
                         rel="stylesheet"
                     />
                     <link
