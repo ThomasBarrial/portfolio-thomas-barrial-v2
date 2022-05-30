@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import metaImage from "../../../public/metaImage.png";
 
 interface IProps {
     pageTitle: string;
@@ -28,7 +27,7 @@ function Meta({
             <meta property="og:type" content="website" />
             <meta property="og:title" content={pageTitle} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={metaImage} />
+            <meta property="og:image" content="" />
         </Head>
     );
 }
