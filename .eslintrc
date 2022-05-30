@@ -47,6 +47,7 @@
         "react/react-in-jsx-scope": "off",
         "react/require-default-props": "off",
         "react/jsx-props-no-spreading": "off",
-        "react/jsx-closing-bracket-location": "off"
+        "react/jsx-closing-bracket-location": "off",
+        "@typescript-eslint/space-before-blocks": "off"
     }
 }
