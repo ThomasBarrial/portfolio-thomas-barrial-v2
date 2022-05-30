@@ -6,45 +6,8 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
-            margin: {
-                "30px": "30px",
-            },
-            colors: {
-                darkBlue: "#00253E",
-                lightBlue: "#00FFFF",
-                ultraLightBlue: "#99FFFC",
-                smoothBlue: "#3A81AD",
-                blue: "#04A7F0",
-                hardBlue: "#174B75",
-                white: "#F8F5F1",
-                purple: "#9658E4",
-                green: "#38A795",
-            },
-            maxWidth: {
-                content: "1000px",
-            },
-            minHeight: {
-                container: "520px",
-                textpartner: "120px",
-            },
-            width: {
-                line: "0.1rem",
-                section3: "89.5%",
-                people: "11rem",
-                92: "93%",
-            },
-            inset: {
-                dot: "4.9rem",
-            },
-            height: {
-                header: "28rem",
-                line: "1px",
-                footer: "32rem",
-                roadMap: "40rem",
-            },
             boxShadow: {
                 container: "0px 10px 20px rgba(0, 0, 0, 0.25)",
-                contactForm: "-20px 4px 20px rgba(0, 0, 0, 0.15);",
             },
             fontFamily: {
                 roboto: ["Roboto Condensed", "sans-serif"],
