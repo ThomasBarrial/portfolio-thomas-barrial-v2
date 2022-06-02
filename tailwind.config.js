@@ -9,9 +9,15 @@ module.exports = {
             boxShadow: {
                 container: "0px 10px 20px rgba(0, 0, 0, 0.25)",
             },
+            height: {
+                100: "32rem",
+            },
+            width: {
+                0.5: "0.10rem",
+            },
             fontFamily: {
-                roboto: ["Roboto Condensed", "sans-serif"],
-                poppins: ["Poppins", "sans-serif"],
+                teko: ["Teko", "sans-serif"],
+                montserrat: ["Montserrat", "sans-serif"],
             },
             screens: {
                 lg: "1400px",
