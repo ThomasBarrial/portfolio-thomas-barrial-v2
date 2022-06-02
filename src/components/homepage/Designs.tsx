@@ -1,5 +1,4 @@
 import Image from "next/dist/client/image";
-import React, { useEffect, useState } from "react";
 
 interface IProps {
     offsetY: number;
@@ -14,11 +13,9 @@ function Designs({ offsetY }: IProps): JSX.Element {
             }}
         >
             <div
-                className="flex space-x-5 ml-52 h-4/6"
+                className="flex space-x-5 ml-52  pl-design w-design h-4/6"
                 style={{
                     transform: `translateX(-${(offsetY / 2) * 0.2}px`,
-                    width: "160%",
-                    paddingLeft: "700px",
                 }}
             >
                 <div>
@@ -35,11 +32,9 @@ function Designs({ offsetY }: IProps): JSX.Element {
                 </div>
             </div>
             <div
-                className="flex space-x-5 mt-5 mr-52 h-4/6"
+                className="flex space-x-5 mt-5 mr-52  -pl-design w-design h-4/6"
                 style={{
                     transform: `translateX(${(offsetY / 2) * 0.2}px)`,
-                    width: "160%",
-                    paddingRight: "700px",
                 }}
             >
                 <div>

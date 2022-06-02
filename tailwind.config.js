@@ -14,6 +14,10 @@ module.exports = {
             },
             width: {
                 0.5: "0.10rem",
+                design: "160%",
+            },
+            padding: {
+                design: "700px"
             },
             fontFamily: {
                 teko: ["Teko", "sans-serif"],
