@@ -7,7 +7,7 @@ function index(): JSX.Element {
         <Layout>
             <Meta pageTitle="" title="" description="" keywords="" />
             <div className="h-screen w-screen flex items-center justify-center">
-                <h1 className="text-xl font-bold">HELLO NEXTJS</h1>
+                <h1 className="text-xl font-bold">Thomas Barrial</h1>
             </div>
         </Layout>
     );
