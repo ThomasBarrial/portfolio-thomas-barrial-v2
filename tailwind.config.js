@@ -7,7 +7,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundColor: {
-                footer: "#131313",
+                footer: "#1E1E1E",
                 button: "#292929",
             },
             boxShadow: {

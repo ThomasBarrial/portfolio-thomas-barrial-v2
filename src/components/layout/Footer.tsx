@@ -3,14 +3,14 @@ import Image from "next/dist/client/image";
 import React, { useEffect, useState } from "react";
 
 function Footer({ offsetY }: { offsetY: number }): JSX.Element {
-    const [value, setValue] = useState(6650);
+    const [value, setValue] = useState(6400);
     const [isHover, setIsHover] = useState(false);
 
     useEffect(() => {
         if (window.innerHeight >= 1200) {
             setValue(7200);
         } else {
-            setValue(6650);
+            setValue(6400);
         }
     }, [offsetY]);
 
@@ -19,7 +19,7 @@ function Footer({ offsetY }: { offsetY: number }): JSX.Element {
             <div
                 className=" absolute w-screen z-10 transform -translate-y-72 h-20"
                 style={{
-                    boxShadow: " 0px 20px 20px 0px rgba(0,0,0, 0.3)",
+                    boxShadow: " 0px 20px 20px 0px rgba(0,0,0, 0.8)",
                 }}
             />
             <div
