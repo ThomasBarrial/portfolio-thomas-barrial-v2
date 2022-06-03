@@ -28,7 +28,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         <Image src="/icons/cross.svg" width={20} height={20} />
                     </div>
                 </div>
-                <div className="absolute">
+                <div ref={ref} className="absolute">
                     {inView && (
                         <motion.p
                             variants={variants}
@@ -40,7 +40,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         </motion.p>
                     )}
                 </div>
-                <div ref={ref} className="mt-72 font-montserrat text-lg">
+                <div className="mt-72 font-montserrat text-lg">
                     <h3
                         style={{
                             transform: `translateY(-${(offsetY / 8) * 0.5}px)`,
@@ -68,7 +68,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="mt-12"
+                        className="mt-20 z-10"
                     >
                         Wildstory est un réseau sociale qui a pour but de
                         partager les connaissances, les offres

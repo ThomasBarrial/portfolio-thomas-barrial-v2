@@ -1,7 +1,5 @@
 import React from "react";
 
-// import SmoothScrollComponent from "./SmoothScrollComponent";
-
 interface IProps {
     children: React.ReactNode;
 }

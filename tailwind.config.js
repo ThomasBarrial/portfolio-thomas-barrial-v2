@@ -6,6 +6,10 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            backgroundColor: {
+                footer: "#131313",
+                button: "#292929",
+            },
             boxShadow: {
                 container: "0px 10px 20px rgba(0, 0, 0, 0.25)",
             },
@@ -17,7 +21,7 @@ module.exports = {
                 design: "160%",
             },
             padding: {
-                design: "700px"
+                design: "700px",
             },
             fontFamily: {
                 teko: ["Teko", "sans-serif"],
@@ -25,6 +29,7 @@ module.exports = {
             },
             screens: {
                 lg: "1400px",
+                xxl: "2200px",
                 // => @media (min-width: 1080px) { ... }
             },
             animation: {

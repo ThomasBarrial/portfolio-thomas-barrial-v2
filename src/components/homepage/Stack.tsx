@@ -27,7 +27,7 @@ function Stack({ offsetY }: IProps): JSX.Element {
                     <Image src="/icons/cross.svg" width={20} height={20} />
                 </div>
             </div>
-            <div className="absolute">
+            <div ref={ref} className="absolute">
                 {inView && (
                     <motion.p
                         variants={variants}
@@ -79,10 +79,7 @@ function Stack({ offsetY }: IProps): JSX.Element {
                         <Image src="/stack4.png" height={550} width={260} />
                     </div>
                 </div>
-                <div
-                    className="w-5/12 mt-52 transform -translate-x-16"
-                    ref={ref}
-                >
+                <div className="w-5/12 mt-52 transform -translate-x-16">
                     <div className="font-montserrat">
                         <h3
                             style={{
