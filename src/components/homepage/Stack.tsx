@@ -20,7 +20,7 @@ function Stack({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="flex max-w-7x mt-32 items-center flex-col mx-auto">
+        <div className="flex max-w-7xl mt-32 items-center flex-col mx-auto">
             <div className="flex items-end w-11/12 lg:w-full">
                 <p className="font-bold font-teko text-5xl">02</p>
                 <div className="mb-1 ml-1">
