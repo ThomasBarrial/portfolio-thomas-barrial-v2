@@ -15,13 +15,13 @@ function WildStory({ offsetY }: IProps): JSX.Element {
             transition: { type: "spring", duration: 3, bounce: 0.1 },
         },
         closed: {
-            x: "600px",
+            x: "500px",
             transition: { type: "spring", duration: 3, bounce: 0.1 },
         },
     };
     return (
-        <div className="flex max-w-7xl mx-auto justify-between">
-            <div className="w-5/12 flex flex-col">
+        <div className="flex flex-col lg:flex-row w-11/12 lg:max-w-7xl mx-auto justify-between">
+            <div className="w-full lg:w-5/12 flex flex-col">
                 <div className="flex items-end">
                     <p className="font-bold font-teko text-5xl">01</p>
                     <div className="mb-1 ml-1">
@@ -34,18 +34,18 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                             variants={variants}
                             initial="closed"
                             animate="open"
-                            className="font-bold  text-8xl  opacity-5"
+                            className="font-bold text-7xl lg:text-8xl  opacity-5"
                         >
                             PROJECT
                         </motion.p>
                     )}
                 </div>
-                <div className="mt-72 font-montserrat text-lg">
+                <div className="mt-32 lg:mt-72 font-montserrat text-lg">
                     <h3
                         style={{
                             transform: `translateY(-${(offsetY / 8) * 0.5}px)`,
                         }}
-                        className="font-teko text-8xl transform -translate-y-10  font-semibold"
+                        className="font-teko text-7xl lg:text-8xl transform -translate-y-10  font-semibold"
                     >
                         WILDSTORY
                     </h3>
@@ -68,7 +68,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="mt-20 z-10"
+                        className="mt-10 lg:mt-20 z-10"
                     >
                         Wildstory est un réseau sociale qui a pour but de
                         partager les connaissances, les offres
@@ -78,7 +78,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="w-5/12 max-w-2xl absolute"
+                        className="w-10/12 max-w-2xl absolute"
                     >
                         d’emploi, les résultats de veille ainsi que les
                         différents projets de tous les Wilders sans oublier les
@@ -87,7 +87,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col items-end ">
+            <div className="lg:flex flex-col items-end hidden ">
                 <div style={{ transform: `translatex(-32px)` }}>
                     <Image
                         priority
@@ -102,6 +102,24 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         transform: `translateY(-${(offsetY / 2) * 0.3}px)`,
                     }}
                 >
+                    <Image
+                        priority
+                        src="/wildStory2.png"
+                        height={350}
+                        width={550}
+                    />
+                </div>
+            </div>
+            <div className="flex lg:hidden  flex-col items-end w-11/12">
+                <div>
+                    <Image
+                        priority
+                        src="/wildStory1.png"
+                        height={550}
+                        width={800}
+                    />
+                </div>
+                <div className="transform -translate-y-20 w-10/12">
                     <Image
                         priority
                         src="/wildStory2.png"

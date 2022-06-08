@@ -16,7 +16,7 @@ function Skills(): JSX.Element {
         },
     };
     return (
-        <div className="max-w-7xl min-h-screen flex font-montserrat text-2xl mx-auto py-80">
+        <div className="max-w-7xl w-11/12 lg:w-full lg:min-h-screen flex font-montserrat md:text-xl lg:text-2xl mx-auto py-32 lg:py-80">
             <div ref={ref} />
             <div className="absolute transform translate-y-96">
                 {inView && (
@@ -24,13 +24,13 @@ function Skills(): JSX.Element {
                         variants={variants}
                         initial="closed"
                         animate="open"
-                        className="font-bold  text-9xl  opacity-5"
+                        className="font-bold text-7xl lg:text-9xl  opacity-5"
                     >
                         SKILLS
                     </motion.p>
                 )}
             </div>
-            <div className="w-5/12 h-96">
+            <div className="w-6/12 lg:w-5/12 h-96">
                 {inView && (
                     <div className="flex flex-col space-y-2">
                         <SlideUp duration={2}>React</SlideUp>
@@ -59,7 +59,7 @@ function Skills(): JSX.Element {
                     </div>
                 )}
                 {inView && (
-                    <div className="mt-32 flex flex-col space-y-2">
+                    <div className="mt-28 lg:mt-32 flex flex-col space-y-2">
                         <SlideUp duration={2}>Firebase</SlideUp>
                         <SlideUp duration={2.2}>Sanity</SlideUp>
                         <SlideUp duration={2.4}>

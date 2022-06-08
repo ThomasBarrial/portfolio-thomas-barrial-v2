@@ -54,7 +54,7 @@ function HeroBanner(): JSX.Element {
                         <h1 className=" text-7xl md:text-9xl text-center font-teko">
                             Thomas Barrial
                         </h1>
-                        <h2 className="font-montserrat transform -translate-y-2 text-3xl">
+                        <h2 className="font-montserrat text-center transform -translate-y-2 text-3xl">
                             DEVELOPER & UI/UX DESIGNER
                         </h2>
                     </motion.div>
@@ -77,8 +77,8 @@ function HeroBanner(): JSX.Element {
                 className="h-100 w-0.5 rounded absolute -bottom-56  bg-black"
             />
 
-            <p className="font-montserrat text-xs md:text-base absolute bottom-10 left-10 animate-fadeIn">
-                Avaliable in Septembre 2022
+            <p className="font-montserrat text-xs md:text-base absolute bottom-5 left-5 lg:bottom-10 lg:left-10 animate-fadeIn">
+                Avaliable Septembre 2022
             </p>
         </div>
     );

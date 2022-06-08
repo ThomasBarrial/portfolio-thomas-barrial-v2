@@ -20,8 +20,8 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="flex max-w-7xl mx-auto justify-between">
-            <div className="w-5/12 flex flex-col">
+        <div className="flex flex-col items-center lg:flex-row max-w-7xl mx-auto justify-between">
+            <div className="w-10/12 lg:w-5/12 flex flex-col">
                 <div className="flex items-end">
                     <p className="font-bold font-teko text-5xl">03</p>
                     <div className="mb-1 ml-1">
@@ -34,7 +34,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                             variants={variants}
                             initial="closed"
                             animate="open"
-                            className="font-bold  text-8xl  opacity-5"
+                            className="font-bold text-7xl lg:text-8xl  opacity-5"
                         >
                             PROJECT
                         </motion.p>
@@ -68,7 +68,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="mt-20 z-10  w-10/12"
+                        className="mt-20 z-10 w-full lg:w-10/12"
                     >
                         L objectif principal de cette application Web est de
                         délcarer les heures de travail en recherche et
@@ -80,14 +80,14 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="w-5/12 max-w-2xl absolute"
+                        className="w-10/12 lg:w-5/12 max-w-2xl absolute"
                     >
                         sont accessibles depuis un dashbord et transmises à un
                         cabinet comptable qui est le porteur du projet.
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col items-end ">
+            <div className="hidden lg:flex flex-col items-end ">
                 <div style={{ transform: `translatex(-32px)` }}>
                     <Image
                         priority
@@ -102,6 +102,24 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                         transform: `translateY(-${(offsetY / 8) * 1}px)`,
                     }}
                 >
+                    <Image
+                        priority
+                        src="/aeviso2.png"
+                        height={350}
+                        width={550}
+                    />
+                </div>
+            </div>
+            <div className="flex lg:hidden transform -translate-y-40 flex-col items-end w-11/12">
+                <div>
+                    <Image
+                        priority
+                        src="/aeviso1.png"
+                        height={480}
+                        width={800}
+                    />
+                </div>
+                <div className="transform -translate-y-20 w-10/12">
                     <Image
                         priority
                         src="/aeviso2.png"

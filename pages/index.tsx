@@ -9,6 +9,8 @@ import Aeviso from "../src/components/homepage/Aeviso";
 import Designs from "../src/components/homepage/Designs";
 import Skills from "../src/components/homepage/Skills";
 import Footer from "../src/components/layout/Footer";
+import DesignsMobile from "../src/components/homepage/DesignsMobile";
+import FooterMobile from "../src/components/layout/FooterMobile";
 
 function index(): JSX.Element {
     const [offsetY, setOffsetY] = useState(0);
@@ -27,9 +29,19 @@ function index(): JSX.Element {
             <WildStory offsetY={offsetY} />
             <Stack offsetY={offsetY} />
             <Aeviso offsetY={offsetY} />
-            <Designs offsetY={offsetY} />
+            <div className="hidden lg:flex">
+                <Designs offsetY={offsetY} />
+            </div>
+            <div className="flex lg:hidden">
+                <DesignsMobile />
+            </div>
             <Skills />
-            <Footer offsetY={offsetY} />
+            <div className="hidden lg:flex">
+                <Footer offsetY={offsetY} />
+            </div>
+            <div className="flex lg:hidden">
+                <FooterMobile />
+            </div>
         </Layout>
     );
 }

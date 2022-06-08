@@ -20,8 +20,8 @@ function Stack({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="flex max-w-7xl  flex-col mx-auto">
-            <div className="flex items-end">
+        <div className="flex max-w-7x mt-32 items-center flex-col mx-auto">
+            <div className="flex items-end w-11/12 lg:w-full">
                 <p className="font-bold font-teko text-5xl">02</p>
                 <div className="mb-1 ml-1">
                     <Image src="/icons/cross.svg" width={20} height={20} />
@@ -33,14 +33,14 @@ function Stack({ offsetY }: IProps): JSX.Element {
                         variants={variants}
                         initial="closed"
                         animate="open"
-                        className="font-bold  text-8xl  opacity-5"
+                        className="font-bold text-7xl lg:text-8xl  opacity-5"
                     >
                         PROJECT
                     </motion.p>
                 )}
             </div>
-            <div className="w-full flex">
-                <div className="flex mt-64 w-8/12">
+            <div className="w-full flex lg:flex-row items-center flex-col-reverse">
+                <div className="hidden mt-64 lg:flex w-10/12">
                     <div
                         className=""
                         style={{
@@ -79,7 +79,21 @@ function Stack({ offsetY }: IProps): JSX.Element {
                         <Image src="/stack4.png" height={550} width={260} />
                     </div>
                 </div>
-                <div className="w-5/12 mt-52 transform -translate-x-16">
+                <div className="flex lg:hidden mb-52 justify-center transform -translate-y-11 w-11/12">
+                    <div className="">
+                        <Image src="/stack1.png" height={630} width={300} />
+                    </div>
+                    <div>
+                        <Image src="/stack2.png" height={700} width={330} />
+                    </div>
+                    <div>
+                        <Image src="/stack3.png" height={620} width={300} />
+                    </div>
+                    <div>
+                        <Image src="/stack4.png" height={700} width={330} />
+                    </div>
+                </div>
+                <div className="w-11/12 lg:w-5/12 mt-32 lg:mt-52 transform lg:-translate-x-16">
                     <div className="font-montserrat">
                         <h3
                             style={{

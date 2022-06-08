@@ -21,7 +21,7 @@ function About(): JSX.Element {
             <div ref={ref} className="max-w-7xl">
                 {inView && (
                     <SlideUp duration={1.2}>
-                        <h3 className="font-montserrat text-3xl uppercase  w-12/12 mx-auto leading-normal font-medium">
+                        <h3 className="font-montserrat text-3xl uppercase w-11/12  lg:w-12/12 mx-auto leading-normal font-medium">
                             Developpeur, passionné de design et de technologie,
                             continuellement à la recherche de nouveaux défis.
                         </h3>
@@ -29,7 +29,7 @@ function About(): JSX.Element {
                 )}
             </div>
 
-            <div className="absolute mt-20 mr-52 transform -translate-x-11  overflow-hidden">
+            <div className="absolute mt-20 lg:mr-52 transform lg:-translate-x-11  overflow-hidden">
                 {inView && (
                     <motion.p
                         variants={variants}

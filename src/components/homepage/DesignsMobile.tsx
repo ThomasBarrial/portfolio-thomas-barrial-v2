@@ -1,12 +1,9 @@
-import Image from "next/dist/client/image";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Image from "next/dist/client/image";
 
-interface IProps {
-    offsetY: number;
-}
-
-function Designs({ offsetY }: IProps): JSX.Element {
+function DesignsMobile(): JSX.Element {
     const { inView, ref } = useInView();
     const variants = {
         open: {
@@ -19,34 +16,22 @@ function Designs({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div
-            className="w-screen pb-14 flex flex-col items-center overflow-hidden"
-            style={{
-                height: "900px",
-            }}
-        >
-            <div
-                ref={ref}
-                className="absolute transform -translate-y-14 -translate-x-80"
-            >
+        <div className="w-screen flex justify-center items-center">
+            {" "}
+            <div ref={ref} className="absolute transform -translate-y-96">
                 {inView && (
                     <motion.p
                         variants={variants}
                         initial="closed"
                         animate="open"
-                        className="font-bold  text-9xl  opacity-5"
+                        className="font-bold text-7xl lg:text-9xl opacity-5"
                     >
                         DESIGN
                     </motion.p>
                 )}
             </div>
-            <div
-                className="flex space-x-5 ml-52 w-design xxl:w-screen pl-design h-4/6"
-                style={{
-                    transform: `translateX(-${(offsetY / 2) * 0.2}px`,
-                }}
-            >
-                <div>
+            <div className="flex w-full flex-wrap">
+                <div className="w-6/12 p-2">
                     <Image
                         className="transform hover:scale-105 duration-500"
                         src="/design1.png"
@@ -54,7 +39,7 @@ function Designs({ offsetY }: IProps): JSX.Element {
                         width={600}
                     />
                 </div>
-                <div>
+                <div className="w-6/12 p-2">
                     <Image
                         className="transform hover:scale-105 duration-500"
                         src="/design4.png"
@@ -62,40 +47,7 @@ function Designs({ offsetY }: IProps): JSX.Element {
                         width={600}
                     />
                 </div>
-                <div>
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design3.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div>
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design6.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-            </div>
-            <div
-                className="flex space-x-5  w-design xxl:w-screen mr-52 h-4/6"
-                style={{
-                    transform: `translateX(${(offsetY / 2) * 0.2}px)`,
-
-                    paddingRight: "700px",
-                }}
-            >
-                <div>
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design8.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div>
+                <div className="w-6/12 p-2">
                     <Image
                         className="transform hover:scale-105 duration-500"
                         src="/design2.png"
@@ -103,7 +55,31 @@ function Designs({ offsetY }: IProps): JSX.Element {
                         width={600}
                     />
                 </div>
-                <div>
+                <div className="w-6/12 p-2">
+                    <Image
+                        className="transform hover:scale-105 duration-500"
+                        src="/design3.png"
+                        height={500}
+                        width={600}
+                    />
+                </div>
+                <div className="w-6/12 p-2">
+                    <Image
+                        className="transform hover:scale-105 duration-500"
+                        src="/design6.png"
+                        height={500}
+                        width={600}
+                    />
+                </div>
+                <div className="w-6/12 p-2">
+                    <Image
+                        className="transform hover:scale-105 duration-500"
+                        src="/design8.png"
+                        height={500}
+                        width={600}
+                    />
+                </div>
+                <div className="w-6/12 p-2">
                     <Image
                         className="transform hover:scale-105 duration-500"
                         src="/design5.png"
@@ -111,7 +87,7 @@ function Designs({ offsetY }: IProps): JSX.Element {
                         width={600}
                     />
                 </div>
-                <div>
+                <div className="w-6/12 p-2">
                     <Image
                         className="transform hover:scale-105 duration-500"
                         src="/design7.png"
@@ -124,4 +100,4 @@ function Designs({ offsetY }: IProps): JSX.Element {
     );
 }
 
-export default Designs;
+export default DesignsMobile;
