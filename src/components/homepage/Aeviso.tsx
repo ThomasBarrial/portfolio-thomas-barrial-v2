@@ -68,7 +68,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="mt-20 z-10 w-full lg:w-10/12"
+                        className="mt-20 lg:mt-12 z-10 w-full lg:w-10/12"
                     >
                         L objectif principal de cette application Web est de
                         délcarer les heures de travail en recherche et

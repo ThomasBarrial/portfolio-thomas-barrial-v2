@@ -66,9 +66,9 @@ function WildStory({ offsetY }: IProps): JSX.Element {
 
                     <p
                         style={{
-                            transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
+                            transform: `translateY(-${(offsetY / 10) * 0.5}px)`,
                         }}
-                        className="mt-10 lg:mt-20 z-10"
+                        className="mt-10 lg:mt-5 z-10"
                     >
                         Wildstory est un réseau sociale qui a pour but de
                         partager les connaissances, les offres
@@ -76,7 +76,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
 
                     <p
                         style={{
-                            transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
+                            transform: `translateY(-${(offsetY / 10) * 0.5}px)`,
                         }}
                         className="w-10/12 max-w-2xl absolute"
                     >

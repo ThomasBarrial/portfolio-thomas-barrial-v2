@@ -15,11 +15,11 @@ function Footer({ offsetY }: { offsetY: number }): JSX.Element {
     }, [offsetY]);
 
     return (
-        <div className="w-screen pt-52  overflow-hidden bg-footer  mx-auto">
+        <div className="w-screen pt-32  overflow-hidden bg-footer  mx-auto">
             <div
-                className=" absolute w-screen z-10 transform -translate-y-72 h-20"
+                className=" absolute w-screen z-10 transform -translate-y-52 h-20"
                 style={{
-                    boxShadow: " 0px 20px 20px 0px rgba(0,0,0, 0.8)",
+                    boxShadow: " 0px 20px 15px 0px rgba(0,0,0, 0.8)",
                 }}
             />
             <div
