@@ -17,7 +17,7 @@ function About(): JSX.Element {
     };
 
     return (
-        <div className=" flex w-screen h-screen overflow-hidden items-center justify-center">
+        <div className=" flex w-full h-screen overflow-hidden items-center justify-center">
             <div ref={ref} className="max-w-7xl">
                 {inView && (
                     <SlideUp duration={1.2}>
@@ -29,7 +29,7 @@ function About(): JSX.Element {
                 )}
             </div>
 
-            <div className="absolute mt-20 lg:mr-52 transform lg:-translate-x-11  overflow-hidden">
+            <div className="absolute mt-20 lg:mr-52 transform lg:-translate-x-11 ">
                 {inView && (
                     <motion.p
                         variants={variants}

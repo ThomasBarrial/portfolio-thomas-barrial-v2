@@ -17,7 +17,7 @@ function Footer({ offsetY }: { offsetY: number }): JSX.Element {
     return (
         <div className="w-screen pt-32  overflow-hidden bg-footer  mx-auto">
             <div
-                className=" absolute w-screen z-10 transform -translate-y-52 h-20"
+                className=" absolute w-full z-10 transform -translate-y-52 h-20"
                 style={{
                     boxShadow: " 0px 20px 15px 0px rgba(0,0,0, 0.8)",
                 }}
@@ -42,12 +42,16 @@ function Footer({ offsetY }: { offsetY: number }): JSX.Element {
                     type="button"
                     style={{
                         transform: `translate(${
-                            (offsetY - 4800) * 0.5
+                            (offsetY - 4900) * 0.5
                         }px, -80px`,
                     }}
                 >
                     <p>Download CV</p>
-                    <div
+                    <a
+                        href="https://online.flippingbook.com/view/220132912/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
                         className={`bg-white h-44 z-10 w-44 flex items-center justify-center  rounded-full absolute transform ${
                             isHover
                                 ? "-translate-y-24 scale-110"
@@ -61,14 +65,14 @@ function Footer({ offsetY }: { offsetY: number }): JSX.Element {
                         >
                             Download CV
                         </p>
-                    </div>
+                    </a>
                 </button>
                 <div className="flex space-x-8 text-white mt-10 font-montserrat text-lg">
                     <p>07 78 02 28 23</p>
                     <p>thomas@barrial.fr</p>
                 </div>
             </div>
-            <div className="justify-between  p-10 flex text-white font-montserrat">
+            <div className="justify-between mt-10  p-10 flex text-white font-montserrat">
                 <p>@edition 2022 develop & design by thomas barrial</p>
                 <div className="flex space-x-5">
                     <a href="https://github.com/ThomasBarrial">github</a>

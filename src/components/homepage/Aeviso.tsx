@@ -20,7 +20,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="flex flex-col items-center lg:flex-row max-w-7xl mx-auto justify-between">
+        <div className="flex mb-52 flex-col items-center lg:flex-row max-w-7xl mx-auto justify-between">
             <div className="w-10/12 lg:w-5/12 flex flex-col">
                 <div className="flex items-end">
                     <p className="font-bold font-teko text-5xl">03</p>
@@ -97,9 +97,9 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                     />
                 </div>
                 <div
-                    className="mt-44"
+                    className=""
                     style={{
-                        transform: `translateY(-${(offsetY / 8) * 1}px)`,
+                        transform: `translateY(-${(offsetY - 3000) * 0.2}px)`,
                     }}
                 >
                     <Image

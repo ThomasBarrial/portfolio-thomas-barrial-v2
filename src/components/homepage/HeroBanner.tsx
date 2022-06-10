@@ -42,7 +42,7 @@ function HeroBanner(): JSX.Element {
         },
     };
     return (
-        <div className="flex flex-col h-screen w-screen items-center justify-center">
+        <div className="flex flex-col h-screen w-full items-center justify-center">
             <div ref={ref}>
                 {inView && (
                     <motion.div
@@ -65,7 +65,7 @@ function HeroBanner(): JSX.Element {
                     variants={variants3}
                     initial="closed"
                     animate="open"
-                    className="absolute bottom-72"
+                    className="absolute bottom-40 lg:bottom-72"
                 >
                     <Image src="/icons/cross.svg" height={22} width={22} />
                 </motion.div>
@@ -74,7 +74,7 @@ function HeroBanner(): JSX.Element {
                 variants={variants2}
                 initial="closed"
                 animate="open"
-                className="h-100 w-0.5 rounded absolute -bottom-56  bg-black"
+                className="h-96 lg:h-100 w-0.5 rounded absolute -bottom-56  bg-black"
             />
 
             <p className="font-montserrat text-xs md:text-base absolute bottom-5 left-5 lg:bottom-10 lg:left-10 animate-fadeIn">
