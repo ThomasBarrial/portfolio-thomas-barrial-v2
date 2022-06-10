@@ -19,12 +19,7 @@ function Designs({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div
-            className="w-screen pb-14 flex flex-col items-center overflow-hidden"
-            style={{
-                height: "900px",
-            }}
-        >
+        <div className="w-screen pb-14 h-designs xxl:h-designsLarge flex flex-col items-center overflow-hidden">
             <div
                 ref={ref}
                 className="absolute transform -translate-y-14 -translate-x-80"
