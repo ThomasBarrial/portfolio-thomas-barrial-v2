@@ -3,7 +3,7 @@ import Layout from "../src/components/layout/Layout";
 import Meta from "../src/components/SEO/Meta";
 import HeroBanner from "../src/components/homepage/HeroBanner";
 import About from "../src/components/homepage/About";
-import WildStory from "../src/components/homepage/WildStory";
+import WildStory from "../src/components/homepage/wildstory/WildStory";
 import Stack from "../src/components/homepage/Stack";
 import Aeviso from "../src/components/homepage/Aeviso";
 import Designs from "../src/components/homepage/Designs";
@@ -12,26 +12,37 @@ import Footer from "../src/components/layout/Footer";
 import DesignsMobile from "../src/components/homepage/DesignsMobile";
 import FooterMobile from "../src/components/layout/FooterMobile";
 import { sanityClient } from "../sanity";
+import heroBannerQuery from "../query/heroBannerQuery";
+import aboutMeQuery from "../query/aboutMeQuery";
+import projectsQuery from "../query/projectsQuery";
+import { useOffsetYFromStore } from "../src/components/store/offsetY.slice";
 
 interface IProps {
     heroBanner: [IHeroBanner];
+    aboutMe: [IAboutMe];
+    projects: [IProjects];
 }
 
-function index({ heroBanner }: IProps): JSX.Element {
+function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
     const [offsetY, setOffsetY] = useState(0);
-
-    const handleScroll = () => setOffsetY(window.scrollY);
+    const { dispatchOffsetY } = useOffsetYFromStore();
+    const handleScroll = () => {
+        setOffsetY(window.scrollY);
+        dispatchOffsetY(window.scrollY);
+    };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
+    console.log(projects);
+
     return (
         <Layout>
             <Meta pageTitle="" title="" description="" keywords="" />
             <HeroBanner content={heroBanner[0]} />
-            <About />
-            <WildStory offsetY={offsetY} />
+            <About content={aboutMe} />
+            <WildStory content={projects[0]} />
             <Stack offsetY={offsetY} />
             <Aeviso offsetY={offsetY} />
             <div className="hidden lg:flex">
@@ -54,16 +65,11 @@ function index({ heroBanner }: IProps): JSX.Element {
 export default index;
 
 export const getServerSideProps = async (): Promise<{ props: IProps }> => {
-    const heroBannerQuery = `*[_type == "heroBanner"]{
-        _id,
-        myName,
-        profilTitle,
-        availableDate, 
-    }`;
-
     const heroBanner = await sanityClient.fetch(heroBannerQuery);
+    const aboutMe = await sanityClient.fetch(aboutMeQuery);
+    const projects = await sanityClient.fetch(projectsQuery);
 
     return {
-        props: { heroBanner },
+        props: { heroBanner, aboutMe, projects },
     };
 };
