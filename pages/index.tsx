@@ -35,8 +35,6 @@ function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-    console.log(projects);
-
     return (
         <Layout>
             <Meta pageTitle="" title="" description="" keywords="" />
