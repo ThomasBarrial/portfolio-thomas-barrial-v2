@@ -11,8 +11,13 @@ import Skills from "../src/components/homepage/Skills";
 import Footer from "../src/components/layout/Footer";
 import DesignsMobile from "../src/components/homepage/DesignsMobile";
 import FooterMobile from "../src/components/layout/FooterMobile";
+import { sanityClient } from "../sanity";
 
-function index(): JSX.Element {
+interface IProps {
+    heroBanner: [IHeroBanner];
+}
+
+function index({ heroBanner }: IProps): JSX.Element {
     const [offsetY, setOffsetY] = useState(0);
 
     const handleScroll = () => setOffsetY(window.scrollY);
@@ -24,7 +29,7 @@ function index(): JSX.Element {
     return (
         <Layout>
             <Meta pageTitle="" title="" description="" keywords="" />
-            <HeroBanner />
+            <HeroBanner content={heroBanner[0]} />
             <About />
             <WildStory offsetY={offsetY} />
             <Stack offsetY={offsetY} />
@@ -47,3 +52,18 @@ function index(): JSX.Element {
 }
 
 export default index;
+
+export const getServerSideProps = async (): Promise<{ props: IProps }> => {
+    const heroBannerQuery = `*[_type == "heroBanner"]{
+        _id,
+        myName,
+        profilTitle,
+        availableDate, 
+    }`;
+
+    const heroBanner = await sanityClient.fetch(heroBannerQuery);
+
+    return {
+        props: { heroBanner },
+    };
+};

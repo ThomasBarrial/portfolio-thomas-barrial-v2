@@ -4,7 +4,11 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/dist/client/image";
 import { useIsLoaderFromStore } from "../store/isLoader.slice";
 
-function HeroBanner(): JSX.Element {
+interface IProps {
+    content: IHeroBanner;
+}
+
+function HeroBanner({ content }: IProps): JSX.Element {
     const { inView, ref } = useInView();
     const { isLoader } = useIsLoaderFromStore();
 
@@ -55,10 +59,10 @@ function HeroBanner(): JSX.Element {
                         className="flex flex-col items-center mb-12"
                     >
                         <h1 className=" text-7xl md:text-9xl text-center font-teko">
-                            Thomas Barrial
+                            {content.myName}
                         </h1>
                         <h2 className="font-montserrat text-center transform -translate-y-2 text-3xl">
-                            DEVELOPER & UI/UX DESIGNER
+                            {content.profilTitle}
                         </h2>
                     </motion.div>
                 )}
@@ -83,7 +87,7 @@ function HeroBanner(): JSX.Element {
             )}
             {!isLoader.active && (
                 <p className="font-montserrat text-xs md:text-base absolute bottom-5 left-5 lg:bottom-10 lg:left-10 animate-fadeIn">
-                    Avaliable Septembre 2022
+                    {content.availableDate}
                 </p>
             )}
         </div>
