@@ -11,3 +11,4 @@ jest.config.js
 jest.setup.js
 tests/**/.js
 tests/*.js
+portfolioContent

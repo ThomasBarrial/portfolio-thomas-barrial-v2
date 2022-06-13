@@ -2,9 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import isLoaderReducer from "./isLoader.slice";
 import isContactReducer from "./isContactContext.slice";
+import offsetYReducer from "./offsetY.slice";
 
 export const store = configureStore({
-    reducer: { isContact: isContactReducer, isLoader: isLoaderReducer },
+    reducer: {
+        isContact: isContactReducer,
+        isLoader: isLoaderReducer,
+        offsetY: offsetYReducer,
+    },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({ serializableCheck: false }),
     devTools: true,

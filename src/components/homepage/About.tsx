@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SlideUp from "../animated/SlideUp";
 
-function About(): JSX.Element {
+function About({ content }: { content: IAboutMe[] }): JSX.Element {
     const { inView, ref } = useInView();
     const variants = {
         open: {
@@ -22,14 +22,13 @@ function About(): JSX.Element {
                 {inView && (
                     <SlideUp duration={1.2}>
                         <h3 className="font-montserrat text-3xl uppercase w-11/12  lg:w-12/12 mx-auto leading-normal font-medium">
-                            Developpeur, passionné de design et de technologie,
-                            continuellement à la recherche de nouveaux défis.
+                            {content[1].value}
                         </h3>
                     </SlideUp>
                 )}
             </div>
 
-            <div className="absolute mt-20 lg:mr-52 transform lg:-translate-x-11 ">
+            <div className="absolute w-9/12 overflow-hidden lg:left-1/4 mt-20  transform lg:-translate-x-11 ">
                 {inView && (
                     <motion.p
                         variants={variants}
@@ -37,7 +36,7 @@ function About(): JSX.Element {
                         animate="open"
                         className="font-bold  text-8xl  opacity-5"
                     >
-                        WORK WITH PASSION
+                        {content[0].value}
                     </motion.p>
                 )}
             </div>

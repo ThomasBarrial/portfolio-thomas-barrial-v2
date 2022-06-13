@@ -6,6 +6,6 @@ module.exports = withImages({
     reactStrictMode: true,
     images: {
         disableStaticImages: true,
-        domains: ["firebasestorage.googleapis.com"],
+        domains: ["firebasestorage.googleapis.com", "cdn.sanity.io"],
     },
 });
