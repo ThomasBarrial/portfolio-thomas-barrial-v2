@@ -20,8 +20,8 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="flex mb-52 flex-col items-center lg:flex-row max-w-7xl mx-auto justify-between">
-            <div className="w-10/12 lg:w-5/12 flex flex-col">
+        <div className="flex lg:mb-52 flex-col items-center lg:flex-row max-w-7xl mx-auto justify-between">
+            <div className="w-11/12 lg:w-5/12 flex flex-col">
                 <div className="flex items-end">
                     <p className="font-bold font-teko text-5xl">03</p>
                     <div className="mb-1 ml-1">
@@ -68,7 +68,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 7) * 0.5}px)`,
                         }}
-                        className="mt-20 lg:mt-20 z-10 w-full lg:w-10/12"
+                        className="mt-20 lg:mt-14 z-10 w-full lg:w-10/12"
                     >
                         L objectif principal de cette application Web est de
                         délcarer les heures de travail en recherche et
@@ -110,7 +110,7 @@ function Aeviso({ offsetY }: IProps): JSX.Element {
                     />
                 </div>
             </div>
-            <div className="flex lg:hidden transform -translate-y-40 flex-col items-end w-11/12">
+            <div className="flex lg:hidden transform -translate-y-40 mt-10 flex-col items-end w-11/12">
                 <div>
                     <Image
                         priority

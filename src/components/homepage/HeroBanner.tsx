@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/dist/client/image";
+import { useIsLoaderFromStore } from "../store/isLoader.slice";
 
 function HeroBanner(): JSX.Element {
     const { inView, ref } = useInView();
-    const variants = {
+    const { isLoader } = useIsLoaderFromStore();
+
+    const variantTitle = {
         open: {
             scale: 1,
             opacity: 1,
@@ -18,7 +21,7 @@ function HeroBanner(): JSX.Element {
         },
     };
 
-    const variants2 = {
+    const variantStrokeAnim = {
         open: {
             y: 0,
             transition: { type: "spring", duration: 2, bounce: 0.1 },
@@ -29,7 +32,7 @@ function HeroBanner(): JSX.Element {
         },
     };
 
-    const variants3 = {
+    const variantCrossAnim = {
         open: {
             scale: 1,
             opacity: 1,
@@ -44,9 +47,9 @@ function HeroBanner(): JSX.Element {
     return (
         <div className="flex flex-col h-screen w-full items-center justify-center">
             <div ref={ref}>
-                {inView && (
+                {inView && !isLoader.active && (
                     <motion.div
-                        variants={variants}
+                        variants={variantTitle}
                         initial="closed"
                         animate="open"
                         className="flex flex-col items-center mb-12"
@@ -60,9 +63,9 @@ function HeroBanner(): JSX.Element {
                     </motion.div>
                 )}
             </div>
-            {inView && (
+            {inView && !isLoader.active && (
                 <motion.div
-                    variants={variants3}
+                    variants={variantCrossAnim}
                     initial="closed"
                     animate="open"
                     className="absolute bottom-40 lg:bottom-72"
@@ -70,16 +73,19 @@ function HeroBanner(): JSX.Element {
                     <Image src="/icons/cross.svg" height={22} width={22} />
                 </motion.div>
             )}
-            <motion.div
-                variants={variants2}
-                initial="closed"
-                animate="open"
-                className="h-96 lg:h-100 w-0.5 rounded absolute -bottom-56  bg-black"
-            />
-
-            <p className="font-montserrat text-xs md:text-base absolute bottom-5 left-5 lg:bottom-10 lg:left-10 animate-fadeIn">
-                Avaliable Septembre 2022
-            </p>
+            {!isLoader.active && (
+                <motion.div
+                    variants={variantStrokeAnim}
+                    initial="closed"
+                    animate="open"
+                    className="h-96 lg:h-100 w-0.5 rounded absolute -bottom-56  bg-black"
+                />
+            )}
+            {!isLoader.active && (
+                <p className="font-montserrat text-xs md:text-base absolute bottom-5 left-5 lg:bottom-10 lg:left-10 animate-fadeIn">
+                    Avaliable Septembre 2022
+                </p>
+            )}
         </div>
     );
 }

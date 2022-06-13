@@ -68,7 +68,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                         style={{
                             transform: `translateY(-${(offsetY / 10) * 0.5}px)`,
                         }}
-                        className="mt-10 lg:mt-10 z-10"
+                        className="mt-2 lg:mt-0 lg:mr-5 z-10"
                     >
                         Wildstory est un réseau sociale qui a pour but de
                         partager les connaissances, les offres
@@ -92,14 +92,14 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                     <Image
                         priority
                         src="/wildStory1.png"
-                        height={550}
-                        width={800}
+                        height={500}
+                        width={750}
                     />
                 </div>
                 <div
                     className="transform"
                     style={{
-                        transform: `translateY(-${(offsetY / 2) * 0.3}px)`,
+                        transform: `translateY(-${(offsetY - 1400) * 0.5}px)`,
                     }}
                 >
                     <Image
@@ -110,7 +110,7 @@ function WildStory({ offsetY }: IProps): JSX.Element {
                     />
                 </div>
             </div>
-            <div className="flex lg:hidden  flex-col items-end w-11/12">
+            <div className="flex lg:hidden mt-32  flex-col items-end w-11/12">
                 <div>
                     <Image
                         priority
