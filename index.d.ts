@@ -20,3 +20,9 @@ interface IProjects {
     projectType: string;
     technicalStack: string[];
 }
+
+interface IDesign {
+    _id: string;
+    mainImage: string;
+    name: tring;
+}
