@@ -15,6 +15,8 @@ function DesignsMobile(): JSX.Element {
             transition: { type: "spring", duration: 3, bounce: 0.1 },
         },
     };
+    // console.log("content", content);
+
     return (
         <div className="w-screen flex justify-center items-center">
             {" "}

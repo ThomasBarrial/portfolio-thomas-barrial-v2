@@ -1,13 +1,17 @@
 import Image from "next/dist/client/image";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { useOffsetYFromStore } from "../store/offsetY.slice";
 
-interface IProps {
-    offsetY: number;
-}
-
-function Designs({ offsetY }: IProps): JSX.Element {
+function Designs(): JSX.Element {
     const { inView, ref } = useInView();
+    const { scrollPosition } = useOffsetYFromStore();
+
+    // const middleIndex = Math.ceil(content.length / 2);
+
+    // const firstList = content.splice(0, middleIndex);
+    // const secondList = content.splice(-middleIndex);
+
     const variants = {
         open: {
             x: 0,
@@ -19,7 +23,7 @@ function Designs({ offsetY }: IProps): JSX.Element {
         },
     };
     return (
-        <div className="w-screen pb-14 h-designs xxl:h-designsLarge flex flex-col items-center overflow-hidden">
+        <div className="w-full hidden lg:flex pb-14 h-designs xxl:h-designsLarge  flex-col items-center overflow-hidden">
             <div
                 ref={ref}
                 className="absolute transform -translate-y-14 -translate-x-80"
@@ -38,7 +42,9 @@ function Designs({ offsetY }: IProps): JSX.Element {
             <div
                 className="flex space-x-5 ml-52 w-design xxl:w-screen pl-design h-4/6"
                 style={{
-                    transform: `translateX(-${(offsetY / 2) * 0.2}px`,
+                    transform: `translateX(-${
+                        (scrollPosition.offsetY / 2) * 0.2
+                    }px`,
                 }}
             >
                 <div>
@@ -77,7 +83,9 @@ function Designs({ offsetY }: IProps): JSX.Element {
             <div
                 className="flex space-x-5  w-design xxl:w-screen mr-52 h-4/6"
                 style={{
-                    transform: `translateX(${(offsetY / 2) * 0.2}px)`,
+                    transform: `translateX(${
+                        (scrollPosition.offsetY / 2) * 0.2
+                    }px)`,
 
                     paddingRight: "700px",
                 }}

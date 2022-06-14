@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/dist/client/image";
 
 interface IProps {
@@ -8,9 +7,9 @@ interface IProps {
 
 function MobileImage({ image1, image2 }: IProps): JSX.Element {
     return (
-        <div className="flex lg:hidden mt-20  flex-col items-end w-full">
+        <div className="flex lg:hidden transform -translate-y-40 mt-10 flex-col items-end w-11/12">
             <div>
-                <Image priority src={image1} height={550} width={800} />
+                <Image priority src={image1} height={480} width={800} />
             </div>
             <div className="transform -translate-y-20 w-10/12">
                 <Image priority src={image2} height={350} width={550} />
