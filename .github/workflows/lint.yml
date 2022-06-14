@@ -16,4 +16,4 @@ jobs:
             - name: Run ESLint
               run: yarn lint
             - name: Build
-              run: next build
+              run: yarn build
