@@ -4,8 +4,8 @@ import Meta from "../src/components/SEO/Meta";
 import HeroBanner from "../src/components/homepage/HeroBanner";
 import About from "../src/components/homepage/About";
 import WildStory from "../src/components/homepage/wildstory/WildStory";
-import Stack from "../src/components/homepage/Stack";
-import Aeviso from "../src/components/homepage/Aeviso";
+import Stack from "../src/components/homepage/stack/Stack";
+import Aeviso from "../src/components/homepage/aeviso/Aeviso";
 import Designs from "../src/components/homepage/Designs";
 import Skills from "../src/components/homepage/Skills";
 import Footer from "../src/components/layout/Footer";
@@ -20,7 +20,7 @@ import { useOffsetYFromStore } from "../src/components/store/offsetY.slice";
 interface IProps {
     heroBanner: [IHeroBanner];
     aboutMe: [IAboutMe];
-    projects: [IProjects];
+    projects: IProjects[];
 }
 
 function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
@@ -41,11 +41,11 @@ function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
             <HeroBanner content={heroBanner[0]} />
             <About content={aboutMe} />
             <WildStory content={projects[0]} />
-            <Stack offsetY={offsetY} />
-            <Aeviso offsetY={offsetY} />
-            <div className="hidden lg:flex">
-                <Designs offsetY={offsetY} />
-            </div>
+            <Stack content={projects[1]} />
+            <Aeviso content={projects[2]} />
+
+            <Designs />
+
             <div className="flex lg:hidden">
                 <DesignsMobile />
             </div>
