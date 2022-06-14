@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SlideUp from "../animated/SlideUp";
 
-function Skills(): JSX.Element {
+function Skills({ content }: { content: ISkill[] }): JSX.Element {
     const { inView, ref } = useInView();
     const variants = {
         open: {
@@ -33,42 +33,48 @@ function Skills(): JSX.Element {
             <div className="w-6/12 lg:w-5/12 h-96">
                 {inView && (
                     <div className="flex flex-col space-y-2">
-                        <SlideUp duration={2}>React</SlideUp>
-                        <SlideUp duration={2.2}>React Native</SlideUp>
-                        <SlideUp duration={2.4}>Typescript</SlideUp>
-                        <SlideUp duration={2.6}>Tailwind</SlideUp>
-                        <SlideUp duration={2.8}>Framer motion</SlideUp>
+                        {content[0].skills.map((item, index) => (
+                            <div key={item}>
+                                <SlideUp duration={1.5 + index / 10}>
+                                    {item}
+                                </SlideUp>
+                            </div>
+                        ))}
                     </div>
                 )}
                 {inView && (
                     <div className="mt-20 flex flex-col space-y-2">
-                        <SlideUp duration={2}>NodeJS</SlideUp>
-                        <SlideUp duration={2.2}>Prisma</SlideUp>
-                        <SlideUp duration={2.4}>Express</SlideUp>
-                        <SlideUp duration={2.6}>GraphQL</SlideUp>
+                        {content[1].skills.map((item, index) => (
+                            <div key={item}>
+                                <SlideUp duration={1.5 + index / 10}>
+                                    {item}
+                                </SlideUp>
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>
             <div className="h-96">
                 {inView && (
                     <div className="flex flex-col space-y-2">
-                        <SlideUp duration={2}>UI/UX</SlideUp>
-                        <SlideUp duration={2.2}>Figma</SlideUp>
-                        <SlideUp duration={2.4}>Responsive Design</SlideUp>
-                        <SlideUp duration={2.6}>Prototyping</SlideUp>
+                        {content[2].skills.map((item, index) => (
+                            <div key={item}>
+                                <SlideUp duration={1.5 + index / 10}>
+                                    {item}
+                                </SlideUp>
+                            </div>
+                        ))}
                     </div>
                 )}
                 {inView && (
                     <div className="mt-28 lg:mt-32 flex flex-col space-y-2">
-                        <SlideUp duration={2}>Firebase</SlideUp>
-                        <SlideUp duration={2.2}>Sanity</SlideUp>
-                        <SlideUp duration={2.4}>
-                            Apllication architecture
-                        </SlideUp>
-                        <SlideUp duration={2.6}>Content management</SlideUp>
-                        <SlideUp duration={2.8}>
-                            Functionnal programming
-                        </SlideUp>
+                        {content[3].skills.map((item, index) => (
+                            <div key={item}>
+                                <SlideUp duration={1.5 + index / 10}>
+                                    {item}
+                                </SlideUp>
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>

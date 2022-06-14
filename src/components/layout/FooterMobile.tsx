@@ -1,36 +1,48 @@
-/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable no-underscore-dangle */
 import Image from "next/dist/client/image";
 import React from "react";
+import { urlFor } from "../../../sanity";
 
-function FooterMobile(): JSX.Element {
+function FooterMobile({ content }: { content: IFooter }): JSX.Element {
     return (
-        <div className="w-screen pt-20 flex flex-col items-center justify-center overflow-hidden bg-footer  mx-auto">
+        <div className="w-screen flex lg:hidden pt-20  flex-col items-center justify-center overflow-hidden bg-footer  mx-auto">
             <div className="flex justify-center w-11/12 flex-col items-center">
-                <Image src="/me.png" height={80} width={80} />
-                <h3 className="font-bold ml-2 font-teko mt-2 text-white text-4xl">{`LET'S WORK TOGETHER`}</h3>
+                <Image
+                    src={urlFor(content.photo).url()}
+                    height={80}
+                    width={80}
+                />
+                <h3 className="font-bold ml-2 font-teko mt-2 text-white text-4xl">
+                    {content.catchPhrase}
+                </h3>
             </div>
             <hr className="bg-white w-full mt-8" />
             <div className="flex justify-between space-x-5 text-white mt-10 font-montserrat text-lg">
-                <p>07 78 02 28 23</p>
-                <p>thomas@barrial.fr</p>
+                <p>{content.phoneNumber}</p>
+                <p>{content.email}</p>
             </div>
-            <button className="mt-5 bg-white w-full py-5 " type="button">
+            <a
+                href="https://online.flippingbook.com/view/220132912/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 bg-white text-center w-full py-5 "
+            >
                 Download CV
-            </button>
+            </a>
             <div className="flex-col  justify-between text-xs text-center  p-10 flex text-white font-montserrat">
                 <div className="flex justify-center space-x-5">
-                    <a href="https://github.com/ThomasBarrial">github</a>
-                    <a href="https://dribbble.com/DC_Studio">dribbble</a>
-                    <a href="https://www.instagram.com/studio.digitalcopilote/">
-                        instagram
-                    </a>
-                    <a href="https://www.linkedin.com/in/thomas-barrial-758a6a130/">
-                        linkedin
-                    </a>
+                    {content.socialMedia.map((item) => (
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={item.link}
+                            key={item._key}
+                        >
+                            {item.name}
+                        </a>
+                    ))}
                 </div>
-                <p className="mt-5">
-                    @edition 2022 develop & design by thomas barrial
-                </p>
+                <p className="mt-5">{content.copyrights}</p>
             </div>
         </div>
     );

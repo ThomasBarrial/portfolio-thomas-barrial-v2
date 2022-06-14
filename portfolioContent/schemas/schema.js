@@ -7,9 +7,18 @@ import heroBanner from "./heroBanner";
 import aboutMe from "./aboutMe";
 import projects from "./projects";
 import design from "./design";
+import skills from "./skills";
+import footer from "./footer";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
     name: "default",
-    types: schemaTypes.concat([heroBanner, aboutMe, projects, design]),
+    types: schemaTypes.concat([
+        heroBanner,
+        aboutMe,
+        projects,
+        design,
+        skills,
+        footer,
+    ]),
 });

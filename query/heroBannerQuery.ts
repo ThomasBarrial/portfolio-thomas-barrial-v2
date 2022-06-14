@@ -1,4 +1,4 @@
-const heroBannerQuery = `*[_type == "heroBanner"]{
+const heroBannerQuery = `*[_type == "heroBanner"][0]{
     _id,
     myName,
     profilTitle,

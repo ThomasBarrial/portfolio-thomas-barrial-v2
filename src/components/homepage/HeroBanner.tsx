@@ -61,7 +61,7 @@ function HeroBanner({ content }: IProps): JSX.Element {
                         <h1 className=" text-7xl md:text-9xl text-center font-teko">
                             {content.myName}
                         </h1>
-                        <h2 className="font-montserrat text-center transform -translate-y-2 text-3xl">
+                        <h2 className="font-montserrat text-center transform -translate-y-2 lg:text-3xl">
                             {content.profilTitle}
                         </h2>
                     </motion.div>
