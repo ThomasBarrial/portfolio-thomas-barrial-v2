@@ -4,12 +4,12 @@ import Meta from "../src/components/SEO/Meta";
 import HeroBanner from "../src/components/homepage/HeroBanner";
 import About from "../src/components/homepage/About";
 import WildStory from "../src/components/homepage/wildstory/WildStory";
-import Stack from "../src/components/homepage/Stack";
-import Aeviso from "../src/components/homepage/Aeviso";
-import Designs from "../src/components/homepage/designs/Designs";
+import Stack from "../src/components/homepage/stack/Stack";
+import Aeviso from "../src/components/homepage/aeviso/Aeviso";
+
 import Skills from "../src/components/homepage/Skills";
 import Footer from "../src/components/layout/Footer";
-import DesignsMobile from "../src/components/homepage/DesignsMobile";
+import DesignsMobile from "../src/components/homepage/designs/DesignsMobile";
 import FooterMobile from "../src/components/layout/FooterMobile";
 import { sanityClient } from "../sanity";
 import heroBannerQuery from "../query/heroBannerQuery";
@@ -17,11 +17,12 @@ import aboutMeQuery from "../query/aboutMeQuery";
 import projectsQuery from "../query/projectsQuery";
 import { useOffsetYFromStore } from "../src/components/store/offsetY.slice";
 import designQuery from "../query/designQuery";
+import Designs from "../src/components/homepage/designs/Designs";
 
 interface IProps {
     heroBanner: [IHeroBanner];
     aboutMe: [IAboutMe];
-    projects: [IProjects];
+    projects: IProjects[];
     designs: IDesign[];
 }
 
@@ -48,8 +49,9 @@ function index({
             <HeroBanner content={heroBanner[0]} />
             <About content={aboutMe} />
             <WildStory content={projects[0]} />
-            <Stack offsetY={offsetY} />
-            <Aeviso offsetY={offsetY} />
+
+            <Stack content={projects[1]} />
+            <Aeviso content={projects[2]} />
             <Designs content={designs} />
             <DesignsMobile content={designs} />
 

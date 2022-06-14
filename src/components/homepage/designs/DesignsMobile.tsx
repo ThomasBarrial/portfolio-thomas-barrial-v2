@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Image from "next/dist/client/image";
-import { urlFor } from "../../../sanity";
+import { urlFor } from "../../../../sanity";
 
 function DesignsMobile({ content }: { content: IDesign[] }): JSX.Element {
     const { inView, ref } = useInView();
@@ -16,6 +16,8 @@ function DesignsMobile({ content }: { content: IDesign[] }): JSX.Element {
             transition: { type: "spring", duration: 3, bounce: 0.1 },
         },
     };
+    // console.log("content", content);
+
     return (
         <div className="w-full flex lg:hidden justify-center items-center">
             {" "}
