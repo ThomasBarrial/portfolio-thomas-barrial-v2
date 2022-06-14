@@ -2,8 +2,9 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Image from "next/dist/client/image";
+import { urlFor } from "../../../sanity";
 
-function DesignsMobile(): JSX.Element {
+function DesignsMobile({ content }: { content: IDesign[] }): JSX.Element {
     const { inView, ref } = useInView();
     const variants = {
         open: {
@@ -16,7 +17,7 @@ function DesignsMobile(): JSX.Element {
         },
     };
     return (
-        <div className="w-screen flex justify-center items-center">
+        <div className="w-full flex lg:hidden justify-center items-center">
             {" "}
             <div ref={ref} className="absolute transform -translate-y-96">
                 {inView && (
@@ -31,70 +32,16 @@ function DesignsMobile(): JSX.Element {
                 )}
             </div>
             <div className="flex w-full flex-wrap">
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design1.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design4.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design2.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design3.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design6.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design8.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design5.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
-                <div className="w-6/12 p-2">
-                    <Image
-                        className="transform hover:scale-105 duration-500"
-                        src="/design7.png"
-                        height={500}
-                        width={600}
-                    />
-                </div>
+                {content.map((item) => (
+                    <div key={item._id} className="w-6/12 p-2">
+                        <Image
+                            className="transform hover:scale-105 duration-500"
+                            src={urlFor(item.mainImage).url()}
+                            height={500}
+                            width={600}
+                        />
+                    </div>
+                ))}
             </div>
         </div>
     );

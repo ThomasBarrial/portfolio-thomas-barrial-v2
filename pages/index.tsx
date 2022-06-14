@@ -6,7 +6,7 @@ import About from "../src/components/homepage/About";
 import WildStory from "../src/components/homepage/wildstory/WildStory";
 import Stack from "../src/components/homepage/Stack";
 import Aeviso from "../src/components/homepage/Aeviso";
-import Designs from "../src/components/homepage/Designs";
+import Designs from "../src/components/homepage/designs/Designs";
 import Skills from "../src/components/homepage/Skills";
 import Footer from "../src/components/layout/Footer";
 import DesignsMobile from "../src/components/homepage/DesignsMobile";
@@ -16,14 +16,21 @@ import heroBannerQuery from "../query/heroBannerQuery";
 import aboutMeQuery from "../query/aboutMeQuery";
 import projectsQuery from "../query/projectsQuery";
 import { useOffsetYFromStore } from "../src/components/store/offsetY.slice";
+import designQuery from "../query/designQuery";
 
 interface IProps {
     heroBanner: [IHeroBanner];
     aboutMe: [IAboutMe];
     projects: [IProjects];
+    designs: IDesign[];
 }
 
-function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
+function index({
+    heroBanner,
+    aboutMe,
+    projects,
+    designs,
+}: IProps): JSX.Element {
     const [offsetY, setOffsetY] = useState(0);
     const { dispatchOffsetY } = useOffsetYFromStore();
     const handleScroll = () => {
@@ -43,12 +50,9 @@ function index({ heroBanner, aboutMe, projects }: IProps): JSX.Element {
             <WildStory content={projects[0]} />
             <Stack offsetY={offsetY} />
             <Aeviso offsetY={offsetY} />
-            <div className="hidden lg:flex">
-                <Designs offsetY={offsetY} />
-            </div>
-            <div className="flex lg:hidden">
-                <DesignsMobile />
-            </div>
+            <Designs content={designs} />
+            <DesignsMobile content={designs} />
+
             <Skills />
             <div className="hidden lg:flex">
                 <Footer offsetY={offsetY} />
@@ -66,8 +70,9 @@ export const getServerSideProps = async (): Promise<{ props: IProps }> => {
     const heroBanner = await sanityClient.fetch(heroBannerQuery);
     const aboutMe = await sanityClient.fetch(aboutMeQuery);
     const projects = await sanityClient.fetch(projectsQuery);
+    const designs = await sanityClient.fetch(designQuery);
 
     return {
-        props: { heroBanner, aboutMe, projects },
+        props: { heroBanner, aboutMe, projects, designs },
     };
 };
