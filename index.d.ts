@@ -26,3 +26,26 @@ interface IDesign {
     mainImage: string;
     name: tring;
 }
+
+interface ISkill {
+    _id: string;
+    category: string;
+    skills: string[];
+}
+
+interface IFooter {
+    _id: string;
+    catchPhrase: string;
+    copyrights: string;
+    email: string;
+    phoneNumber: string;
+    photo: string;
+    socialMedia: ISocialMedia[];
+}
+
+interface ISocialMedia {
+    _key: string;
+    _type: string;
+    link: string;
+    name: sting;
+}
