@@ -7,7 +7,7 @@ function Row1({ content }: { content: IDesign[] }): JSX.Element {
     const { scrollPosition } = useOffsetYFromStore();
     return (
         <div
-            className="flex space-x-5 ml-52 w-design xxl:w-screen pl-design h-4/6"
+            className="flex space-x-5 items-center ml-52 w-design xxl:w-screen pl-design h-4/6"
             style={{
                 transform: `translateX(-${
                     (scrollPosition.offsetY / 2) * 0.2

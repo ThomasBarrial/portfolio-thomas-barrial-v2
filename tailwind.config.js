@@ -16,6 +16,7 @@ module.exports = {
             height: {
                 100: "32rem",
                 designs: "900px",
+                designsL: "1000px",
                 designsLarge: "1200px",
             },
             width: {
@@ -31,6 +32,7 @@ module.exports = {
             },
             screens: {
                 lg: "1400px",
+                xl: "2000px",
                 xxl: "2200px",
                 // => @media (min-width: 1080px) { ... }
             },

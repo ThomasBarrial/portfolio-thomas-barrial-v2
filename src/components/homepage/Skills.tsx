@@ -30,7 +30,7 @@ function Skills({ content }: { content: ISkill[] }): JSX.Element {
                     </motion.p>
                 )}
             </div>
-            <div className="w-6/12 lg:w-5/12 h-96">
+            <div className="w-5/12 lg:w-5/12 h-96">
                 {inView && (
                     <div className="flex flex-col space-y-2">
                         {content[0].skills.map((item, index) => (

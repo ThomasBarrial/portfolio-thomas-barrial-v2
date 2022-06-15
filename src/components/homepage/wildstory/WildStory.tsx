@@ -18,7 +18,7 @@ function WildStory({ content }: IProps): JSX.Element {
 
     return (
         <div className="flex flex-col lg:flex-row w-11/12 lg:max-w-7xl mx-auto justify-between">
-            <div ref={ref} className="w-full lg:w-5/12 flex flex-col">
+            <div ref={ref} className="w-full  lg:w-5/12 flex flex-col">
                 <ProjectsHeader
                     inView={inView}
                     projectNumber={content.projectNumber}

@@ -9,6 +9,11 @@ export default {
             type: "string",
         },
         {
+            name: "order",
+            title: "Place in order",
+            type: "number",
+        },
+        {
             name: "skills",
             title: "Skills",
             type: "array",

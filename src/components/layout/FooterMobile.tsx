@@ -5,7 +5,7 @@ import { urlFor } from "../../../sanity";
 
 function FooterMobile({ content }: { content: IFooter }): JSX.Element {
     return (
-        <div className="w-screen flex lg:hidden pt-20  flex-col items-center justify-center overflow-hidden bg-footer  mx-auto">
+        <div className="w-full flex lg:hidden pt-20  flex-col items-center justify-center overflow-hidden bg-footer  mx-auto">
             <div className="flex justify-center w-11/12 flex-col items-center">
                 <Image
                     src={urlFor(content.photo).url()}

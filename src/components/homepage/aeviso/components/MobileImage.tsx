@@ -7,7 +7,7 @@ interface IProps {
 
 function MobileImage({ image1, image2 }: IProps): JSX.Element {
     return (
-        <div className="flex lg:hidden transform -translate-y-40 mt-10 flex-col items-end w-11/12">
+        <div className="flex lg:hidden transform -translate-y-40  mt-16 sm:mt-0 flex-col items-end w-11/12">
             <div>
                 <Image priority src={image1} height={480} width={800} />
             </div>

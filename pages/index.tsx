@@ -48,7 +48,12 @@ function index({
 
     return (
         <Layout>
-            <Meta pageTitle="" title="" description="" keywords="" />
+            <Meta
+                pageTitle="Porfolio ThomasBarrial"
+                title="Thomas Barrial"
+                description="Hello, welcome on my portfolio, here you can check all my last projects"
+                keywords="Design/Frontend/Developement/Web/Developer/Biarritz/Anglet/Web design"
+            />
             <HeroBanner content={heroBanner} />
             <About content={aboutMe} />
             <WildStory content={projects[0]} />

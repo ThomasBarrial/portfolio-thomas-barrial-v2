@@ -14,7 +14,7 @@ function PorjectDescription({
                     (scrollPosition.offsetY / 6) * 0.2
                 }px)`,
             }}
-            className="mt-2"
+            className="mt-2 max-w-2xl lg:max-w-full"
         >
             {description}
         </p>

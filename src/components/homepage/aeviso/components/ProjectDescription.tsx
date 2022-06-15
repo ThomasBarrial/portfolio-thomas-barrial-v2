@@ -20,7 +20,7 @@ function ProjectDescription({
                         (scrollPosition.offsetY / 7) * 0.5
                     }px)`,
                 }}
-                className="mt-20 lg:mt-14 z-10 w-full lg:w-10/12"
+                className="mt-12 lg:mt-14 z-10 w-full lg:w-10/12"
             >
                 {description}
             </p>

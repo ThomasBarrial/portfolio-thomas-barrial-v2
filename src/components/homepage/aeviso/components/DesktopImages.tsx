@@ -17,7 +17,7 @@ function DesktopImages({ image1, image2 }: IProps): JSX.Element {
                 className=""
                 style={{
                     transform: `translateY(-${
-                        (scrollPosition.offsetY - 3000) * 0.2
+                        (scrollPosition.offsetY - 3200) * 0.3
                     }px)`,
                 }}
             >
