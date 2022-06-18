@@ -20,7 +20,7 @@ function DownloadCVButton(): JSX.Element {
         >
             <p>Download CV</p>
             <a
-                href="https://online.flippingbook.com/view/220132912/"
+                href="https://online.flippingbook.com/view/303216851/"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
